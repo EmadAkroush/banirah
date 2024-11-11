@@ -3,20 +3,24 @@
     <div class="flex flex-row justify-between px-6 py-3">
       <div class="flex flex-row items-center">
         <div>
-        <IconField class="search">
-          <InputIcon>
-            <img src="/public/navbar/icon.svg" alt="" />
-          </InputIcon>
-          <InputText class="a" placeholder="جستوجو کنید" size="small" />
-        </IconField>
-      </div>
+          <IconField class="search">
+            <InputIcon>
+              <img src="/public/navbar/icon.svg" alt="" />
+            </InputIcon>
+            <InputText class="a" placeholder="جستوجو کنید" size="small" />
+          </IconField>
+        </div>
       </div>
       <div class="flex info-bar">
         <div class="basis-1/4">
-          <div class="flex ">
+          <div class="flex">
             <div class="flex items-center justify-center notif">
               <OverlayBadge severity="danger">
-                <img src="/public/navbar/icons-Line-Mail.svg" alt="" />
+                <img
+                  src="/public/navbar/icons-Line-Mail.svg"
+               
+                  alt=""
+                />
               </OverlayBadge>
             </div>
             <div class="flex items-center justify-center notif mr-4">
@@ -43,6 +47,7 @@
 <style lang="scss">
 .navbar {
   height: 72px;
+
   .info-bar {
     width: 400px;
     .top {
@@ -55,7 +60,7 @@
     }
   }
   .notif {
-    background-color:  #F3F4F6;
+    background-color: #f3f4f6;
     width: 38px;
     height: 38px;
     border-radius: 50%;
@@ -63,8 +68,11 @@
 }
 .search {
   border-radius: 16px;
+  background-color: #f3f4f6;
+
   .a {
     border-radius: 16px;
+    background-color: #f3f4f6;
     font-size: 16px;
     width: 300px;
     height: 48px;

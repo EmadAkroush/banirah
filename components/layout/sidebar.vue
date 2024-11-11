@@ -1,15 +1,11 @@
 <template>
   <div class="p-6 sidebar">
     <div class="card flex justify-center">
-      <Image
-        src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg"
-        alt="Image"
-        width="250"
-      />
+    <img src="/public/sidebar/Group33.png" alt="">
     </div>
     <div class="card flex justify-start">
       <ul class="mt-6 menu">
-        <li class="flex align-center menu-item">
+        <li class="flex align-center menu-item ">
           <img
             src="../../public/sidebar/1.svg"
             alt="Image"
@@ -18,7 +14,7 @@
           />
           داشبورد
         </li>
-        <li class="flex align-center menu-item">
+        <li class="flex align-center menu-item active">
           <img
              src="../../public/sidebar/2.svg"
             alt="Image"
@@ -97,6 +93,15 @@
 </template>
 <style lang="scss">
 .sidebar {
+  width: 100%;
+  .menu {
+    width: 100%;
+  }
+  .active {
+    background-color: #CEDCCD;
+    border-radius: 8px;
+   
+  }
   .menu-item {
     align-items: center;
     color: #6B7280;
