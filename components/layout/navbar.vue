@@ -5,7 +5,7 @@
         <div>
           <IconField class="search">
             <InputIcon>
-              <img src="/public/navbar/icon.svg" alt="" />
+              <img src="/public/navbar/icon.svg" alt=""  />
             </InputIcon>
             <InputText class="a" placeholder="جستوجو کنید" size="small" />
           </IconField>
