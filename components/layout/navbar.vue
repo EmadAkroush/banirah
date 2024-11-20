@@ -17,8 +17,7 @@
             <div class="flex items-center justify-center notif">
               <OverlayBadge severity="danger">
                 <img
-                  src="/public/navbar/icons-Line-Mail.svg"
-               
+                  src="/public/navbar/icons-Line-Mail.svg"          
                   alt=""
                 />
               </OverlayBadge>

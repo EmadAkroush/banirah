@@ -1,11 +1,11 @@
 <template>
-  <div class="administrative p-6">
+  <div class="general p-6">
     <div class="flex sec1">
       <div class="flex align-center">
         <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
 
         <div class="mr-2 text-right">
-          <p class="text-right">اداری</p>
+          <p class="text-right">عمومی</p>
         </div>
       </div>
       <div
@@ -35,20 +35,15 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M4.33557 14.27C4.33557 12.7316 5.58276 11.4844 7.12124 11.4844H31.0822C32.6206 11.4844 33.8678 12.7316 33.8678 14.27V23.8488C33.8678 30.6775 28.3321 36.2132 21.5034 36.2132H16.7C9.8713 36.2132 4.33557 30.6775 4.33557 23.8488V14.27ZM7.12124 13.8721C6.90145 13.8721 6.72329 14.0503 6.72329 14.27V23.8488C6.72329 29.3588 11.19 33.8255 16.7 33.8255H21.5034C27.0134 33.8255 31.4801 29.3588 31.4801 23.8488V14.27C31.4801 14.0503 31.3019 13.8721 31.0822 13.8721H7.12124Z"
-                    fill="#93CC1A"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M15.0921 5.43799C14.0937 6.0954 13.5087 7.00536 13.5087 8.21103V19.3819C13.5087 20.0413 12.9742 20.5758 12.3148 20.5758C11.6555 20.5758 11.121 20.0413 11.121 19.3819V8.21103C11.121 6.06549 12.2325 4.46201 13.7789 3.44377C15.2903 2.44861 17.23 1.99027 19.1009 1.99023C20.9719 1.9902 22.9116 2.44849 24.423 3.44361C25.9694 4.46183 27.081 6.0653 27.081 8.21087V19.3819C27.081 20.0413 26.5464 20.5758 25.8871 20.5758C25.2277 20.5758 24.6932 20.0413 24.6932 19.3819V8.21087C24.6932 7.00517 24.1083 6.09522 23.1099 5.43785C22.0764 4.7574 20.6231 4.37792 19.101 4.37795C17.5788 4.37797 16.1255 4.75749 15.0921 5.43799Z"
-                    fill="#93CC1A"
+                    d="M22.1668 3.59375V10.1338C22.1668 11.0205 22.1668 11.4639 22.3393 11.8026C22.4911 12.1005 22.7334 12.3427 23.0313 12.4945C23.37 12.6671 23.8134 12.6671 24.7001 12.6671H31.2401M19.0001 28.5003V19.0003M14.2501 23.7503H23.7501M22.1668 3.16699H13.9334C11.2732 3.16699 9.94306 3.16699 8.92698 3.68471C8.03321 4.14011 7.30655 4.86677 6.85115 5.76054C6.33344 6.77662 6.33344 8.10674 6.33344 10.767V27.2337C6.33344 29.8939 6.33344 31.224 6.85115 32.2401C7.30655 33.1339 8.03321 33.8605 8.92698 34.3159C9.94306 34.8337 11.2732 34.8337 13.9334 34.8337H24.0668C26.727 34.8337 28.0571 34.8337 29.0732 34.3159C29.967 33.8605 30.6937 33.1339 31.1491 32.2401C31.6668 31.224 31.6668 29.8939 31.6668 27.2337V12.667L22.1668 3.16699Z"
+                    stroke="#EA6940"
+                    stroke-width="2.38771"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                   />
                 </svg>
               </div>
-              <p class="m-0 pt-9 text-buttom">درخواست خرید</p>
+              <p class="m-0 pt-9 text-buttom">ایجاد نامه</p>
             </div>
           </template>
         </Card>
@@ -69,36 +64,158 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M27.3603 16.5456L33.2503 10.6556L27.3603 4.76562"
-                    stroke="#007AFF"
+                    d="M14.25 34.8337H23.75C31.6667 34.8337 34.8334 31.667 34.8334 23.7503V14.2503C34.8334 6.33366 31.6667 3.16699 23.75 3.16699H14.25C6.33338 3.16699 3.16671 6.33366 3.16671 14.2503V23.7503C3.16671 31.667 6.33338 34.8337 14.25 34.8337Z"
+                    stroke="#93CC1A"
                     stroke-width="2.38771"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
-                    d="M4.75009 10.6562H33.2501"
-                    stroke="#007AFF"
+                    d="M11.0834 13.0625C12.6667 14.6458 15.2476 14.6458 16.8467 13.0625"
+                    stroke="#93CC1A"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21.1533 13.0625C22.7366 14.6458 25.3174 14.6458 26.9166 13.0625"
+                    stroke="#93CC1A"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13.3 20.583H24.7C25.4917 20.583 26.125 21.2163 26.125 22.008C26.125 25.9505 22.9425 29.133 19 29.133C15.0575 29.133 11.875 25.9505 11.875 22.008C11.875 21.2163 12.5084 20.583 13.3 20.583Z"
+                    stroke="#93CC1A"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p class="m-0 pt-9 text-buttom">مرخصی</p>
+            </div>
+          </template>
+        </Card>
+      </div>
+      <div class="basis-1/4">
+        <Card class="cardout c3">
+          <template #content>
+            <div class="flex items-center justify-center cardmy">
+              <div
+                class="in3 in flex items-center justify-center"
+                style="width: 76px; height: 76px"
+              >
+                <svg
+                  width="38"
+                  height="38"
+                  viewBox="0 0 38 38"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.6666 34.8333H25.3333C31.6983 34.8333 32.8383 32.2842 33.1708 29.1808L34.3583 16.5142C34.7858 12.6508 33.6774 9.5 26.9166 9.5H11.0833C4.32243 9.5 3.2141 12.6508 3.6416 16.5142L4.8291 29.1808C5.1616 32.2842 6.3016 34.8333 12.6666 34.8333Z"
+                    stroke="#F2A002"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.6667 9.50033V8.23366C12.6667 5.43116 12.6667 3.16699 17.7333 3.16699H20.2667C25.3333 3.16699 25.3333 5.43116 25.3333 8.23366V9.50033"
+                    stroke="#F2A002"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22.1667 20.5833V22.1667C22.1667 22.1825 22.1667 22.1825 22.1667 22.1983C22.1667 23.9242 22.1509 25.3333 19 25.3333C15.865 25.3333 15.8334 23.94 15.8334 22.2142V20.5833C15.8334 19 15.8334 19 17.4167 19H20.5834C22.1667 19 22.1667 19 22.1667 20.5833Z"
+                    stroke="#F2A002"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M34.2791 17.417C30.6216 20.077 26.4416 21.6603 22.1666 22.1987"
+                    stroke="#F2A002"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M4.14838 17.8438C7.71088 20.2821 11.7325 21.7546 15.8334 22.2137"
+                    stroke="#F2A002"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p class="m-0 pt-9 text-buttom">ماموریت</p>
+            </div>
+          </template>
+        </Card>
+      </div>
+      <div class="basis-1/4">
+        <Card class="cardout c4">
+          <template #content>
+            <div class="flex items-center justify-center cardmy">
+              <div
+                class="in4 in flex items-center justify-center"
+                style="width: 76px; height: 76px"
+              >
+                <svg
+                  width="38"
+                  height="38"
+                  viewBox="0 0 38 38"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.656 31.192C11.9543 29.7987 13.9335 29.9095 15.0735 31.4295L16.6726 33.567C17.9551 35.2612 20.0293 35.2612 21.3118 33.567L22.911 31.4295C24.051 29.9095 26.0301 29.7987 27.3285 31.192C30.1468 34.2003 32.4426 33.2028 32.4426 28.9912V11.147C32.4585 4.76616 30.9701 3.16699 24.9851 3.16699H13.0151C7.03014 3.16699 5.54181 4.76616 5.54181 11.147V28.9753C5.54181 33.2028 7.85348 34.1845 10.656 31.192Z"
+                    stroke="#3CAFB6"
                     stroke-width="2.38771"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
-                    d="M10.64 21.4531L4.75009 27.3432L10.64 33.2331"
-                    stroke="#007AFF"
+                    d="M12.8187 17.4167H12.8329"
+                    stroke="#3CAFB6"
                     stroke-width="2.38771"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
-                    d="M33.2501 27.3438H4.75009"
-                    stroke="#007AFF"
+                    d="M17.2557 17.417H25.9641"
+                    stroke="#3CAFB6"
+                    stroke-width="2.38771"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.8187 11.0837H12.8329"
+                    stroke="#3CAFB6"
+                    stroke-width="2.38771"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.2557 11.083H25.9641"
+                    stroke="#3CAFB6"
                     stroke-width="2.38771"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                 </svg>
               </div>
-              <p class="m-0 pt-9 text-buttom">ثبت ورود خروج</p>
+              <p class="m-0 pt-9 text-buttom">گزارش</p>
             </div>
           </template>
         </Card>
@@ -138,7 +255,7 @@
           <template #title>
             <div class="flex flex-row justify-between mb-12">
               <div>
-                <span class="one"> ماموریت </span>
+                <span class="one"> لیست واریزی </span>
               </div>
               <div class="right flex items-center justify-center">
                 <span class="ml-2"> تایید شد </span>
@@ -181,7 +298,7 @@
   </div>
 </template>
 <style lang="scss">
-.administrative {
+.general {
   background-color: #f3f4f6;
   min-height: 100vh;
 
@@ -208,7 +325,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
   }
   .cardout {
     box-shadow: 0px 0px 12px 0px #0000000f;
@@ -220,19 +336,19 @@
     }
   }
   .in1 {
-    background-color: #F6FDE7;
+    background-color: #FFEDED;
     border-radius: 50%;
   }
   .in2 {
-    background-color: #EFF6FF;
+    background-color: #F6FDE7;
     border-radius: 50%;
   }
   .in3 {
-    background-color: #fdf1ff;
+    background-color: #FFFAEF;
     border-radius: 50%;
   }
   .in4 {
-    background-color: #fffaef;
+    background-color: #E5F8F9;
     border-radius: 50%;
   }
   .in5 {
@@ -256,11 +372,10 @@
       #f2f8ff 106.19%
     );
     .in1 {
-      background-color: #93CC1A;
+      background-color: #EA6940;
       path {
-        stroke: white;
         color: white;
-        fill: white;
+        stroke: white;
       }
     }
   }
@@ -274,7 +389,7 @@
     background: linear-gradient(48.55deg, #fdfdfd -1.31%, #f2f8ff 106.19%);
     background: linear-gradient(48.55deg, #fdfdfd -1.31%, #f2f8ff 106.19%);
     .in2 {
-      background-color: #007AFF;
+      background-color: #93cc1a;
       path {
         stroke: white;
       }
@@ -287,7 +402,7 @@
       #f2f8ff 106.19%
     );
     .in3 {
-      background-color: #c600ff;
+      background-color: #F2A002;
       path {
         stroke: white;
       }
@@ -300,7 +415,7 @@
       #f2f8ff 106.19%
     );
     .in4 {
-      background-color: #f2a002;
+      background-color: #3CAFB6;
       path {
         stroke: white;
       }
