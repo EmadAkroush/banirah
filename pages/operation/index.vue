@@ -22,57 +22,59 @@
       <div class="basis-1/6">
         <Card class="cardout c1">
           <template #content>
-            <div class="flex align-center justify-center cardmy">
-              <div
-                class="in1 in flex items-center justify-center"
-                style="width: 76px; height: 76px"
-              >
-                <svg
-                  width="39"
-                  height="38"
-                  viewBox="0 0 39 38"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            <nuxt-link to="operation/loadingprocess">
+              <div class="flex align-center justify-center cardmy">
+                <div
+                  class="in1 in flex items-center justify-center"
+                  style="width: 76px; height: 76px"
                 >
-                  <path
-                    d="M11.1082 14.6619L19.4999 19.5227L27.8282 14.6935"
-                    stroke="#007AFF"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M19.4997 28.136V19.5068"
-                    stroke="#007AFF"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M17.5367 9.95927L12.47 12.7776C11.33 13.4109 10.38 15.0101 10.38 16.3243V21.6918C10.38 23.0059 11.3142 24.6051 12.47 25.2384L17.5367 28.0568C18.6134 28.6584 20.3867 28.6584 21.4792 28.0568L26.5459 25.2384C27.6859 24.6051 28.6359 23.0059 28.6359 21.6918V16.3084C28.6359 14.9943 27.7017 13.3951 26.5459 12.7618L21.4792 9.94343C20.3867 9.34176 18.6134 9.34177 17.5367 9.95927Z"
-                    stroke="#007AFF"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M35.333 23.75C35.333 29.8775 30.3772 34.8333 24.2497 34.8333L25.9121 32.0625"
-                    stroke="#007AFF"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M3.6665 14.2501C3.6665 8.12258 8.62234 3.16675 14.7498 3.16675L13.0874 5.93758"
-                    stroke="#007AFF"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                  <svg
+                    width="39"
+                    height="38"
+                    viewBox="0 0 39 38"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.1082 14.6619L19.4999 19.5227L27.8282 14.6935"
+                      stroke="#007AFF"
+                      stroke-width="2.38771"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19.4997 28.136V19.5068"
+                      stroke="#007AFF"
+                      stroke-width="2.38771"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.5367 9.95927L12.47 12.7776C11.33 13.4109 10.38 15.0101 10.38 16.3243V21.6918C10.38 23.0059 11.3142 24.6051 12.47 25.2384L17.5367 28.0568C18.6134 28.6584 20.3867 28.6584 21.4792 28.0568L26.5459 25.2384C27.6859 24.6051 28.6359 23.0059 28.6359 21.6918V16.3084C28.6359 14.9943 27.7017 13.3951 26.5459 12.7618L21.4792 9.94343C20.3867 9.34176 18.6134 9.34177 17.5367 9.95927Z"
+                      stroke="#007AFF"
+                      stroke-width="2.38771"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M35.333 23.75C35.333 29.8775 30.3772 34.8333 24.2497 34.8333L25.9121 32.0625"
+                      stroke="#007AFF"
+                      stroke-width="2.38771"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.6665 14.2501C3.6665 8.12258 8.62234 3.16675 14.7498 3.16675L13.0874 5.93758"
+                      stroke="#007AFF"
+                      stroke-width="2.38771"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <p class="m-0 pt-3 text-buttom">فرآیند بارگیری</p>
               </div>
-              <p class="m-0 pt-3 text-buttom">فرآیند بارگیری</p>
-            </div>
+            </nuxt-link>
           </template>
         </Card>
       </div>
@@ -830,7 +832,7 @@
         </Card>
       </div>
     </div>
-  
+
     <div>
       <div class="flex flex-row">
         <Card class="card-bar mt-7">
@@ -954,7 +956,6 @@
   .in1 {
     background-color: #e6f2ff;
     border-radius: 50%;
-    
   }
   .in2 {
     background-color: #f0fdf4;
