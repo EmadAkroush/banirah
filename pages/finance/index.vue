@@ -84,50 +84,7 @@
           </template>
         </Card>
       </div>
-      <div class="basis-1/4">
-        <Card class="cardout c2">
-          <template #content>
-            <div class="flex items-center justify-center cardmy">
-              <div
-                class="in2 in flex items-center justify-center"
-                style="width: 76px; height: 76px"
-              >
-                <svg
-                  width="38"
-                  height="38"
-                  viewBox="0 0 38 38"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M28.5 29.8617H27.2966C26.03 29.8617 24.8266 30.3526 23.94 31.2392L21.2324 33.9151C19.9974 35.1342 17.9867 35.1342 16.7517 33.9151L14.0441 31.2392C13.1575 30.3526 11.9383 29.8617 10.6875 29.8617H9.49997C6.87164 29.8617 4.74997 27.7559 4.74997 25.1592V7.86925C4.74997 5.27258 6.87164 3.16675 9.49997 3.16675H28.5C31.1283 3.16675 33.25 5.27258 33.25 7.86925V25.1434C33.25 27.7401 31.1283 29.8617 28.5 29.8617Z"
-                    stroke="#93CC1A"
-                    stroke-width="2.38771"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M19.111 14.1708C19.0476 14.1708 18.9526 14.1708 18.8734 14.1708C17.2109 14.1075 15.8967 12.7617 15.8967 11.0833C15.8967 9.37335 17.2743 7.99585 18.9843 7.99585C20.6943 7.99585 22.0718 9.38918 22.0718 11.0833C22.0876 12.7617 20.7735 14.1233 19.111 14.1708Z"
-                    stroke="#93CC1A"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M14.646 18.9368C12.5401 20.3459 12.5401 22.6418 14.646 24.0509C17.0368 25.6501 20.9635 25.6501 23.3543 24.0509C25.4601 22.6418 25.4601 20.3459 23.3543 18.9368C20.9635 17.3534 17.0526 17.3534 14.646 18.9368Z"
-                    stroke="#93CC1A"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <p class="m-0 pt-9 text-buttom">تعریف شخص</p>
-            </div>
-          </template>
-        </Card>
-      </div>
+      
       <div class="basis-1/4">
         <Card class="cardout c3">
           <template #content>
@@ -157,56 +114,7 @@
           </template>
         </Card>
       </div>
-      <div class="basis-1/4">
-        <Card class="cardout c4">
-          <template #content>
-            <div class="flex items-center justify-center cardmy">
-              <div
-                class="in4 in flex items-center justify-center"
-                style="width: 76px; height: 76px"
-              >
-                <svg
-                  width="38"
-                  height="38"
-                  viewBox="0 0 38 38"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.5032 17.2109C14.3449 17.1951 14.1549 17.1951 13.9807 17.2109C10.2124 17.0842 7.21991 13.9967 7.21991 10.1967C7.21991 6.31758 10.3549 3.16675 14.2499 3.16675C18.1291 3.16675 21.2799 6.31758 21.2799 10.1967C21.2641 13.9967 18.2716 17.0842 14.5032 17.2109Z"
-                    stroke="#22C55E"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M25.9826 6.33325C29.0542 6.33325 31.5242 8.81909 31.5242 11.8749C31.5242 14.8674 29.1492 17.3058 26.1884 17.4166C26.0617 17.4008 25.9192 17.4008 25.7767 17.4166"
-                    stroke="#22C55E"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M6.5867 23.0535C2.75503 25.6185 2.75503 29.7985 6.5867 32.3477C10.9409 35.261 18.0817 35.261 22.4359 32.3477C26.2675 29.7827 26.2675 25.6027 22.4359 23.0535C18.0975 20.156 10.9567 20.156 6.5867 23.0535Z"
-                    stroke="#22C55E"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M29.0385 31.6667C30.1785 31.4292 31.2551 30.9701 32.1418 30.2892C34.6118 28.4367 34.6118 25.3809 32.1418 23.5284C31.271 22.8634 30.2101 22.4201 29.086 22.1667"
-                    stroke="#22C55E"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <p class="m-0 pt-9 text-buttom">ثبت اشخاص</p>
-            </div>
-          </template>
-        </Card>
-      </div>
+  
     </div>
 
     <div>
@@ -323,19 +231,19 @@
     }
   }
   .in1 {
-    background-color: #EFF6FF;
+    background-color: #eff6ff;
     border-radius: 50%;
   }
   .in2 {
-    background-color: #F6FDE7;
+    background-color: #f6fde7;
     border-radius: 50%;
   }
   .in3 {
-    background-color: #F6EEFF;
+    background-color: #f6eeff;
     border-radius: 50%;
   }
   .in4 {
-    background-color: #F0FDF4;
+    background-color: #f0fdf4;
     border-radius: 50%;
   }
   .in5 {
@@ -359,7 +267,7 @@
       #f2f8ff 106.19%
     );
     .in1 {
-      background-color: #007AFF;
+      background-color: #007aff;
       path {
         color: white;
         stroke: white;
@@ -376,7 +284,7 @@
     background: linear-gradient(48.55deg, #fdfdfd -1.31%, #f2f8ff 106.19%);
     background: linear-gradient(48.55deg, #fdfdfd -1.31%, #f2f8ff 106.19%);
     .in2 {
-      background-color: #93CC1A;
+      background-color: #93cc1a;
       path {
         stroke: white;
       }
@@ -389,7 +297,7 @@
       #f2f8ff 106.19%
     );
     .in3 {
-      background-color: #9747FF;
+      background-color: #9747ff;
       path {
         stroke: white;
       }
@@ -402,7 +310,7 @@
       #f2f8ff 106.19%
     );
     .in4 {
-      background-color: #02CD79;
+      background-color: #02cd79;
       path {
         stroke: white;
       }
