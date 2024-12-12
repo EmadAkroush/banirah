@@ -22,7 +22,7 @@
     <div>
       <div class="card">
         <div class="p-4">
-          <Card class="px-12 mb-4" style="height: 100px">
+          <Card class="px-12 mb-4" style="height: 100px; box-shadow: none;">
             <template #content>
               <Stepper value="2">
                 <StepList>

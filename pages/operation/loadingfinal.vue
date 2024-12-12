@@ -22,7 +22,7 @@
     <div>
       <div class="card">
         <div class="p-4">
-          <Card class="px-12 mb-4" style="height: 100px">
+          <Card class="px-12 mb-4" style="height: 100px; box-shadow: none;">
             <template #content>
               <Stepper value="2">
                 <StepList>
@@ -47,22 +47,32 @@
             
             <DataTable :value="tableData" class="p-datatable-gridlines">
               <Column field="index" header="ردیف" sortable></Column>
-              <Column field="task" header="تاریخ" sortable></Column>
-              <Column field="sender" header="مبداء" sortable>
+              <Column field="tarikh" header="تاریخ" sortable></Column>
+              <Column field="mabdae" header="مبداء" sortable>
            
               </Column>
-              <Column field="priority" header="مقصد" sortable></Column>
-              <Column field="priority" header="ترانزیت" sortable></Column>
-              <Column field="priority" header="گمرک خروجی" sortable></Column>
-              <Column field="priority" header="تناژ " sortable></Column>
-              <Column field="priority" header="نوع فراورده " sortable></Column>
-              <Column field="priority" header="نام راننده" sortable></Column>
-              <Column field="priority" header="مبلغ " sortable></Column>
+              <Column field="maghsad" header="مقصد" sortable></Column>
+              <Column field="teransit" header="ترانزیت" sortable></Column>
+              <Column field="gomrok" header="گمرک خروجی" sortable></Column>
+              <Column field="tonaj" header="تناژ " sortable></Column>
+              <Column field="noefaravardeh" header="نوع فراورده " sortable></Column>
+              <Column field="namranndeh" header="نام راننده" sortable></Column>
+              <Column field="mablagh" header="مبلغ " sortable></Column>
 
 
 
        
             </DataTable>
+       
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <Paginator
+              :rows="10"
+              :totalRecords="120"
+              :rowsPerPageOptions="[10, 20, 30]"
+            ></Paginator>
+
+            <span>صفحه شماره ۲</span>
           </div>
           <div class="flex justify-end mt-4">
             <nuxt-link to="/operation/newrequest">
@@ -154,55 +164,98 @@ export default {
       tableData: [
         {
           index: 1,
-          task: "عنوان وظیفه پیش فرض",
-          senderAvatar: "path/to/avatar.png",
-          senderName: "نام فرستنده",
-          priority: "اولویت",
-        },
-        {
-          index: 1,
-          task: "عنوان وظیفه پیش فرض",
-          senderAvatar: "path/to/avatar.png",
-          senderName: "نام فرستنده",
-          priority: "اولویت",
-        },
-        {
-          index: 1,
-          task: "عنوان وظیفه پیش فرض",
-          senderAvatar: "path/to/avatar.png",
-          senderName: "نام فرستنده",
-          priority: "اولویت",
-        },
-        {
-          index: 1,
-          task: "عنوان وظیفه پیش فرض",
-          senderAvatar: "path/to/avatar.png",
-          senderName: "نام فرستنده",
-          priority: "اولویت",
-        },
-        {
-          index: 1,
-          task: "عنوان وظیفه پیش فرض",
-          senderAvatar: "path/to/avatar.png",
-          senderName: "نام فرستنده",
-          priority: "اولویت",
-        },
-        {
-          index: 1,
-          task: "عنوان وظیفه پیش فرض",
-          senderAvatar: "path/to/avatar.png",
-          senderName: "نام فرستنده",
-          priority: "اولویت",
-        },
-        {
-          index: 1,
-          task: "عنوان وظیفه پیش فرض",
-          senderAvatar: "path/to/avatar.png",
-          senderName: "نام فرستنده",
-          priority: "اولویت",
-        },
+          tarikh: "۲ اردیبهشت ۱۴۰۲",
+          mabdae: "مشهد",
+          maghsad: "ارمنستان",
+          teransit: "ترانزیت",
+          gomrok: "فلان گمرک", 
+          tonaj: "۸۹۷۷",
+          noefaravardeh: "زمینی",
+          namranndeh: "نام و نام خانوداگی",
+          mablagh: "0 ریال",
 
-        // Repeat as needed...
+        },
+        {
+          index: 1,
+          tarikh: "۲ اردیبهشت ۱۴۰۲",
+          mabdae: "مشهد",
+          maghsad: "ارمنستان",
+          teransit: "ترانزیت",
+          gomrok: "فلان گمرک", 
+          tonaj: "۸۹۷۷",
+          noefaravardeh: "زمینی",
+          namranndeh: "نام و نام خانوداگی",
+          mablagh: "0 ریال",
+
+        },
+        {
+          index: 1,
+          tarikh: "۲ اردیبهشت ۱۴۰۲",
+          mabdae: "مشهد",
+          maghsad: "ارمنستان",
+          teransit: "ترانزیت",
+          gomrok: "فلان گمرک", 
+          tonaj: "۸۹۷۷",
+          noefaravardeh: "زمینی",
+          namranndeh: "نام و نام خانوداگی",
+          mablagh: "0 ریال",
+
+        },
+        {
+          index: 1,
+          tarikh: "۲ اردیبهشت ۱۴۰۲",
+          mabdae: "مشهد",
+          maghsad: "ارمنستان",
+          teransit: "ترانزیت",
+          gomrok: "فلان گمرک", 
+          tonaj: "۸۹۷۷",
+          noefaravardeh: "زمینی",
+          namranndeh: "نام و نام خانوداگی",
+          mablagh: "0 ریال",
+
+        },
+        {
+          index: 1,
+          tarikh: "۲ اردیبهشت ۱۴۰۲",
+          mabdae: "مشهد",
+          maghsad: "ارمنستان",
+          teransit: "ترانزیت",
+          gomrok: "فلان گمرک", 
+          tonaj: "۸۹۷۷",
+          noefaravardeh: "زمینی",
+          namranndeh: "نام و نام خانوداگی",
+          mablagh: "0 ریال",
+
+        },
+        {
+          index: 1,
+          tarikh: "۲ اردیبهشت ۱۴۰۲",
+          mabdae: "مشهد",
+          maghsad: "ارمنستان",
+          teransit: "ترانزیت",
+          gomrok: "فلان گمرک", 
+          tonaj: "۸۹۷۷",
+          noefaravardeh: "زمینی",
+          namranndeh: "نام و نام خانوداگی",
+          mablagh: "0 ریال",
+
+        },
+        {
+          index: 1,
+          tarikh: "۲ اردیبهشت ۱۴۰۲",
+          mabdae: "مشهد",
+          maghsad: "ارمنستان",
+          teransit: "ترانزیت",
+          gomrok: "فلان گمرک", 
+          tonaj: "۸۹۷۷",
+          noefaravardeh: "زمینی",
+          namranndeh: "نام و نام خانوداگی",
+          mablagh: "0 ریال",
+
+        },
+   
+   
+  
       ],
     };
   },

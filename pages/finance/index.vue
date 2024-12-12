@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="flex flex-row gap-x-3 mt-3">
-      <div class="basis-1/4">
+      <div class="basis-1/6">
         <Card class="cardout c1">
           <template #content>
             <nuxt-link to="finance/depositlist">
@@ -87,7 +87,7 @@
         </Card>
       </div>
 
-      <div class="basis-1/4">
+      <div class="basis-1/6">
         <Card class="cardout c3">
           <template #content>
             <div class="flex items-center justify-center cardmy">
@@ -116,38 +116,75 @@
           </template>
         </Card>
       </div>
+
+      <div class="basis-1/6">
+        <Card class="cardout c2">
+          <template #content>
+            <div class="flex items-center justify-center cardmy">
+              <div
+                class="in2 flex items-center justify-center"
+                style="width: 76px; height: 76px"
+              >
+                <svg
+                  width="39"
+                  height="38"
+                  viewBox="0 0 39 38"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M31.0584 12.5401V20.6943C31.0584 25.571 28.2717 27.6609 24.0917 27.6609H10.1742C9.46171 27.6609 8.78088 27.5977 8.14754 27.4552C7.75171 27.3918 7.37172 27.281 7.02339 27.1543C4.64839 26.2677 3.20755 24.2093 3.20755 20.6943V12.5401C3.20755 7.66343 5.99421 5.57349 10.1742 5.57349H24.0917C27.6384 5.57349 30.1876 7.07765 30.8684 10.5135C30.9792 11.1468 31.0584 11.7959 31.0584 12.5401Z"
+                    stroke="#22C55E"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M35.8102 17.2903V25.4445C35.8102 30.3212 33.0235 32.4111 28.8435 32.4111H14.926C13.7543 32.4111 12.6935 32.2529 11.7752 31.9045C9.89102 31.2079 8.6085 29.767 8.14934 27.4554C8.78267 27.5979 9.4635 27.6611 10.176 27.6611H24.0935C28.2735 27.6611 31.0602 25.5712 31.0602 20.6945V12.5403C31.0602 11.7961 30.9968 11.1312 30.8702 10.5137C33.8785 11.147 35.8102 13.2686 35.8102 17.2903Z"
+                    stroke="#22C55E"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.1227 20.8049C19.4312 20.8049 21.3027 18.9334 21.3027 16.6248C21.3027 14.3163 19.4312 12.4448 17.1227 12.4448C14.8141 12.4448 12.9426 14.3163 12.9426 16.6248C12.9426 18.9334 14.8141 20.8049 17.1227 20.8049Z"
+                    stroke="#22C55E"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.06851 13.1418V20.1086"
+                    stroke="#22C55E"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M26.1843 13.1423V20.109"
+                    stroke="#22C55E"
+                    stroke-width="2.38771"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p class="m-0 pt-9">پرداخت</p>
+            </div>
+          </template>
+        </Card>
+      </div>
     </div>
 
     <div>
       <div class="flex flex-row gap-3 mt-6">
-        <Card class="w-1/2">
-          <template #title>
-            <div class="flex flex-row justify-between mb-12">
-              <div>
-                <span class="one"> تعریف شخص </span>
-              </div>
-              <div class="left flex items-center justify-center">
-                <span class="ml-1">در انتظار تایید اداری</span>
-                <span>
-                  <img
-                    src="/public/opration/icons-Line-Line-arrow-up.svg"
-                    alt=""
-                  />
-                </span>
-              </div>
-            </div>
-          </template>
-          <template #content>
-            <Stepper value="1">
-              <StepList>
-                <Step value="1"> درخواست کننده </Step>
-                <Step value="2"> تایید اداری </Step>
-                <Step value="3"> تایید مدیریت </Step>
-              </StepList>
-            </Stepper>
-          </template>
-        </Card>
-        <Card class="w-1/2">
+       
+        <Card class="w-full">
           <template #title>
             <div class="flex flex-row justify-between mb-12">
               <div>
@@ -229,7 +266,7 @@
   }
   .cardout {
     box-shadow: 0px 0px 12px 0px #0000000f;
-    padding: 60px 0;
+    // padding: 60px 0;
     .text-buttom {
       font-weight: 400;
       font-size: 16px;

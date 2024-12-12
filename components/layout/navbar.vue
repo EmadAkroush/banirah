@@ -7,13 +7,13 @@
             <InputIcon>
               <img src="/public/navbar/icon.svg" alt=""  />
             </InputIcon>
-            <InputText class="a" placeholder="جستوجو کنید" size="small" />
+            <InputText class="a" placeholder="جستجو" size="small" />
           </IconField>
         </div>
       </div>
       <div class="flex info-bar">
-        <div class="basis-1/4">
-          <div class="flex">
+        <div class="basis-2/4">
+          <div class="flex justify-end">
             <div class="flex items-center justify-center notif">
               <OverlayBadge severity="danger">
                 <img
@@ -29,9 +29,10 @@
             </div>
           </div>
         </div>
-        <div class="basis-1/4"></div>
-        <div class="basis-2/4">
-          <div class="flex mr-auto">
+        
+        <div class="basis-3/4">
+          <div class="flex justify-end ml-4">
+            
             <div>
               <p class="top">افرا صانعی نیا نیک</p>
               <p class="down">سمت سازمانی</p>

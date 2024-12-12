@@ -56,20 +56,7 @@
               border-radius: 12px;
             "
           >
-            <div class="flex justify-between items-center py-4">
-              <h1 class="text-lg font-semibold">لیست درخواست بازیابی</h1>
-              <div class="flex gap-2">
-                <button class="rounded-full p-2 bg-gray-100 hover:bg-gray-200">
-                  <img src="/public/listbargiry/icons-Line-search.png" alt="" />
-                </button>
-                <button class="rounded-full p-2 bg-gray-100 hover:bg-gray-200">
-                  <img
-                    src="/public/listbargiry/icons-Line-Sharing.png"
-                    alt=""
-                  />
-                </button>
-              </div>
-            </div>
+       
             <DataTable :value="tableData" class="p-datatable-gridlines">
               <Column field="index" header="ردیف" sortable></Column>
               <Column field="task" header="وظیفه" sortable></Column>

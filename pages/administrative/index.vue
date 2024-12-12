@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="flex flex-row gap-x-3 mt-3">
-        <div class="basis-1/4">
+        <div class="basis-1/6">
           <Card class="cardout c1">
             <template #content>
               <div class="flex items-center justify-center cardmy">
@@ -53,7 +53,7 @@
             </template>
           </Card>
         </div>
-        <div class="basis-1/4">
+        <div class="basis-1/6">
           <Card class="cardout c2">
             <template #content>
               <div class="flex items-center justify-center cardmy">
@@ -103,13 +103,13 @@
             </template>
           </Card>
         </div>
-        <div class="basis-1/4">
-        <Card class="cardout c2">
+        <div class="basis-1/6">
+        <Card class="cardout c3">
           <template #content>
             <nuxt-link to="/administrative/listperson">
               <div class="flex items-center justify-center cardmy">
                 <div
-                  class="in2 in flex items-center justify-center"
+                  class="in3 in flex items-center justify-center"
                   style="width: 76px; height: 76px"
                 >
                   <svg
@@ -148,12 +148,12 @@
             </nuxt-link>
           </template>
         </Card>
-      </div>-
+      </div>
       </div>
   
       <div>
         <div class="flex flex-row gap-3 mt-6">
-          <Card class="w-1/2">
+          <Card class="w-1/2" >
             <template #title>
               <div class="flex flex-row justify-between mb-12">
                 <div>
@@ -230,6 +230,7 @@
   .administrative {
     background-color: #f3f4f6;
     min-height: 100vh;
+ 
     .p-datatable-header-cell {
     background-color: #f5f5f5;
     color: #888888;
@@ -263,7 +264,7 @@
     }
     .cardout {
       box-shadow: 0px 0px 12px 0px #0000000f;
-      padding: 60px 0;
+      // padding: 60px 0;
       .text-buttom {
         font-weight: 400;
         font-size: 16px;
@@ -279,9 +280,9 @@
       border-radius: 50%;
     }
     .in3 {
-      background-color: #fdf1ff;
-      border-radius: 50%;
-    }
+    background-color: #f6fde7;
+    border-radius: 50%;
+  }
     .in4 {
       background-color: #fffaef;
       border-radius: 50%;
@@ -332,18 +333,21 @@
       }
     }
     .c3:hover {
-      background-image: linear-gradient(
-        48.55deg,
-        #fdfdfd -1.31%,
-        #f2f8ff 106.19%
-      );
-      .in3 {
-        background-color: #c600ff;
-        path {
-          stroke: white;
-        }
+    background-image: linear-gradient(
+      48.55deg,
+      #fdfdfd -1.31%,
+      #f2f8ff 106.19%
+    );
+    background: linear-gradient(48.55deg, #fdfdfd -1.31%, #f2f8ff 106.19%);
+    background: linear-gradient(48.55deg, #fdfdfd -1.31%, #f2f8ff 106.19%);
+    background: linear-gradient(48.55deg, #fdfdfd -1.31%, #f2f8ff 106.19%);
+    .in3 {
+      background-color: #93cc1a;
+      path {
+        stroke: white;
       }
     }
+  }
     .c4:hover {
       background-image: linear-gradient(
         48.55deg,
