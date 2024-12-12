@@ -49,7 +49,7 @@
             <div class="flex gap-4 mt-8 justify-center">
               <div
                 class="flex flex-col justify-center items-center box p-8"
-                style="border: 1px solid #D1D5DB; border-radius: 16px"
+                style="border: 1px solid #d1d5db; border-radius: 16px"
               >
                 <h1
                   class="items-center"
@@ -73,7 +73,7 @@
               </div>
               <div
                 class="box flex flex-col justify-center items-center p-8"
-                style="border: 1px solid #D1D5DB; border-radius: 16px"
+                style="border: 1px solid #d1d5db; border-radius: 16px"
               >
                 <h1
                   style="text-align: center; font-size: 45px; font-weight: 900"
@@ -251,6 +251,35 @@
                   193
                 </h1>
               </div>
+              <div
+                class="flex justify-around items-center space-x-4 p-6 mx-auto"
+              >
+                <!-- Repeat this block for each progress indicator -->
+                <div
+                  v-for="n in 3"
+                  :key="n"
+                  class="flex flex-col items-center space-y-2"
+                >
+                  <!-- Percentage Display -->
+                  <div class="bg-white p-2 rounded shadow text-center">
+                    <span class="text-lg font-bold">۱۵٪</span>
+                  </div>
+                  <!-- Progress Bar -->
+                  <div
+                    class="relative w-full h-2 bg-gradient-to-r from-indigo-100 to-indigo-400 rounded-full"
+                  >
+                    <div
+                      class="absolute top-0 left-0 h-full bg-indigo-500 rounded-full"
+                      style="width: 15%"
+                    ></div>
+                  </div>
+                  <!-- Label -->
+                  <div class="flex items-center space-x-2">
+                    <span class="w-3 h-3 bg-indigo-300 rounded-full"></span>
+                    <span class="text-xs text-gray-600">در انتظار بارگیری</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               class="card"
@@ -297,7 +326,7 @@
           "
         >
           <div class="flex justify-between">
-            <div class="flex   items-center">
+            <div class="flex items-center">
               <div
                 class="ml-3 flex justify-center items-center"
                 style="
@@ -307,10 +336,14 @@
                   height: 48px;
                 "
               >
-                <img src="/public/dashboard/1.png" alt="" style="width: 20px; height: 20px;" />
+                <img
+                  src="/public/dashboard/1.png"
+                  alt=""
+                  style="width: 20px; height: 20px"
+                />
               </div>
               <h2 style="font-weight: 700; font-size: 16px">
-                درخواست های پیش فرض    
+                درخواست های پیش فرض
               </h2>
             </div>
             <div
@@ -373,6 +406,51 @@
           </div>
         </div>
       </div>
+      <div class="mt-4 grid grid-cols-2 gap-4">
+        <div
+          class="card"
+          style="
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0px 0px 12px 0px #0000000f;
+          "
+        >
+          <div class="p-6 mx-auto">
+            <h2 class="text-2xl font-bold mb-4 text-right">
+              درخواست های پیش فرض
+            </h2>
+            <Chart
+              type="bar"
+              :data="chartData"
+              :options="chartOptions"
+              class="w-full"
+              style="height: 300px"
+            />
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0px 0px 12px 0px #0000000f;
+          "
+        >
+          <div class=" mx-auto p-6">
+            <h2 class="text-2xl font-bold mb-4 text-right">
+              درخواست های پیش فرض
+            </h2>
+            <Chart
+              type="line"
+              :data="chartData1"
+              :options="chartOptions1"
+              class="w-full"
+              style="height: 300px"
+            />
+      
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -396,7 +474,9 @@
 }
 </style>
 <script>
+
 export default {
+
   data() {
     return {
       products: [
@@ -423,29 +503,111 @@ export default {
         {
           id: 1,
           index: 1,
-          driverName: 'فربد رضایی زرگر',
-          driverAvatar: 'path/to/avatar1.png',
-          code: '۵۵۵۵۵۵۵',
-          requestDate: '۱۴۰۳ رجب',
-          serialNumber: 'POFDFADF',
-          carType: 'پراید',
-          accountNumber: '۷۲۳۴۵۶۷۸۹۱۲۳۴',
-          status: 'پرداخت شد',
+          driverName: "فربد رضایی زرگر",
+          driverAvatar: "path/to/avatar1.png",
+          code: "۵۵۵۵۵۵۵",
+          requestDate: "۱۴۰۳ رجب",
+          serialNumber: "POFDFADF",
+          carType: "پراید",
+          accountNumber: "۷۲۳۴۵۶۷۸۹۱۲۳۴",
+          status: "پرداخت شد",
         },
         {
           id: 2,
           index: 2,
-          driverName: 'فربد رضایی زرگر',
-          driverAvatar: 'path/to/avatar2.png',
-          code: '۵۵۵۵۵۵۵',
-          requestDate: '۱۴۰۳ رجب',
-          serialNumber: 'POFDFADF',
-          carType: 'پراید',
-          accountNumber: '۷۲۳۴۵۶۷۸۹۱۲۳۴',
-          status: 'پرداخت شد',
+          driverName: "فربد رضایی زرگر",
+          driverAvatar: "path/to/avatar2.png",
+          code: "۵۵۵۵۵۵۵",
+          requestDate: "۱۴۰۳ رجب",
+          serialNumber: "POFDFADF",
+          carType: "پراید",
+          accountNumber: "۷۲۳۴۵۶۷۸۹۱۲۳۴",
+          status: "پرداخت شد",
         },
       ],
-    };
+      chartData: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+        datasets: [
+          {
+            label: "در انتظار بارگیری",
+            backgroundColor: "rgba(34, 197, 94, 0.6)",
+            data: [65, 59, 80, 81, 56, 55, 40],
+          },
+          {
+            label: "در انتظار بارگیری",
+            backgroundColor: "rgba(34, 197, 94, 0.4)",
+            data: [28, 48, 40, 19, 86, 27, 90],
+          },
+          {
+            label: "در انتظار بارگیری",
+            backgroundColor: "rgba(34, 197, 94, 0.2)",
+            data: [18, 48, 77, 9, 100, 27, 40],
+          },
+        ],
+      },
+      chartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "top",
+            labels: {
+              usePointStyle: true,
+            },
+          },
+        },
+        scales: {
+          x: {
+            stacked: true,
+          },
+          y: {
+            stacked: true,
+          },
+        },
+      },
+ // Chart Data
+ chartData1: {
+        labels: ['۰۰', '۰۴', '۰۸', '۱۲', '۱۶', '۲۰'],
+        datasets: [
+          {
+            label: 'عنوان پیش فرض',
+            data: [2, 4, 6, 8, 7, 9],
+            fill: false,
+            borderColor: '#6366F1',  // Blue Line
+            backgroundColor: '#6366F1',
+            tension: 0.4,
+          },
+          {
+            label: 'عنوان پیش فرض',
+            data: [1, 3, 5, 5, 6, 8],
+            fill: false,
+            borderColor: '#10B981',  // Green Line
+            backgroundColor: '#10B981',
+            tension: 0.4,
+          },
+        ],
+      },
+      // Chart Options
+      chartOptions1: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: false,
+            },
+          },
+          y: {
+            display: false,
+          },
+        },
+      },
+}
   },
 };
 </script>
