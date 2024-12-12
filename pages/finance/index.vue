@@ -22,69 +22,71 @@
       <div class="basis-1/4">
         <Card class="cardout c1">
           <template #content>
-            <div class="flex items-center justify-center cardmy">
-              <div
-                class="in1 in flex items-center justify-center"
-                style="width: 76px; height: 76px"
-              >
-                <svg
-                  width="38"
-                  height="38"
-                  viewBox="0 0 38 38"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            <nuxt-link to="finance/depositlist">
+              <div class="flex items-center justify-center cardmy">
+                <div
+                  class="in1 in flex items-center justify-center"
+                  style="width: 76px; height: 76px"
                 >
-                  <path
-                    d="M3.1665 13.4583H21.3748"
-                    stroke="#007AFF"
-                    stroke-width="2.38771"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M9.49994 26.125H12.6666"
-                    stroke="#007AFF"
-                    stroke-width="2.38771"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M16.625 26.125H22.9583"
-                    stroke="#007AFF"
-                    stroke-width="2.38771"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M34.8332 19.0476V25.5076C34.8332 31.0651 33.424 32.4584 27.8032 32.4584H10.1965C4.57567 32.4584 3.1665 31.0651 3.1665 25.5076V12.4926C3.1665 6.93508 4.57567 5.54175 10.1965 5.54175H21.3748"
-                    stroke="#007AFF"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M26.1249 9.89575H34.8333"
-                    stroke="#007AFF"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M30.4791 14.2501V5.54175"
-                    stroke="#007AFF"
-                    stroke-width="2.38771"
-                    stroke-linecap="round"
-                  />
-                </svg>
+                  <svg
+                    width="38"
+                    height="38"
+                    viewBox="0 0 38 38"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.1665 13.4583H21.3748"
+                      stroke="#007AFF"
+                      stroke-width="2.38771"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9.49994 26.125H12.6666"
+                      stroke="#007AFF"
+                      stroke-width="2.38771"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16.625 26.125H22.9583"
+                      stroke="#007AFF"
+                      stroke-width="2.38771"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M34.8332 19.0476V25.5076C34.8332 31.0651 33.424 32.4584 27.8032 32.4584H10.1965C4.57567 32.4584 3.1665 31.0651 3.1665 25.5076V12.4926C3.1665 6.93508 4.57567 5.54175 10.1965 5.54175H21.3748"
+                      stroke="#007AFF"
+                      stroke-width="2.38771"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M26.1249 9.89575H34.8333"
+                      stroke="#007AFF"
+                      stroke-width="2.38771"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M30.4791 14.2501V5.54175"
+                      stroke="#007AFF"
+                      stroke-width="2.38771"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <p class="m-0 pt-9 text-buttom">تنظیم لیست واریزی</p>
               </div>
-              <p class="m-0 pt-9 text-buttom">تنظیم لیست واریزی</p>
-            </div>
+            </nuxt-link>
           </template>
         </Card>
       </div>
-      
+
       <div class="basis-1/4">
         <Card class="cardout c3">
           <template #content>
@@ -114,7 +116,6 @@
           </template>
         </Card>
       </div>
-  
     </div>
 
     <div>
@@ -196,6 +197,11 @@
 .finance {
   background-color: #f3f4f6;
   min-height: 100vh;
+  .p-datatable-header-cell {
+    background-color: #f5f5f5;
+    color: #888888;
+    text-align: center;
+  }
 
   .sec1 {
     display: flex;

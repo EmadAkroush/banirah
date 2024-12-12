@@ -230,6 +230,11 @@
   .administrative {
     background-color: #f3f4f6;
     min-height: 100vh;
+    .p-datatable-header-cell {
+    background-color: #f5f5f5;
+    color: #888888;
+    text-align: center;
+  }
   
     .sec1 {
       display: flex;
