@@ -48,7 +48,7 @@
                     />
                   </svg>
                 </div>
-                <p class="m-0 pt-9 text-buttom">درخواست خرید</p>
+                <p class="m-0 pt-3 text-buttom">درخواست خرید</p>
               </div>
             </template>
           </Card>
@@ -98,7 +98,7 @@
                     />
                   </svg>
                 </div>
-                <p class="m-0 pt-9 text-buttom">ثبت ورود خروج</p>
+                <p class="m-0 pt-3 text-buttom">ثبت ورود خروج</p>
               </div>
             </template>
           </Card>
@@ -143,7 +143,7 @@
                     />
                   </svg>
                 </div>
-                <p class="m-0 pt-9 text-buttom">تعریف شخص</p>
+                <p class="m-0 pt-3 text-buttom">تعریف شخص</p>
               </div>
             </nuxt-link>
           </template>

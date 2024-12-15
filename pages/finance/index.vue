@@ -80,7 +80,7 @@
                     />
                   </svg>
                 </div>
-                <p class="m-0 pt-9 text-buttom">تنظیم لیست واریزی</p>
+                <p class="m-0 pt-3 text-buttom">تنظیم لیست واریزی</p>
               </div>
             </nuxt-link>
           </template>
@@ -111,7 +111,7 @@
                   />
                 </svg>
               </div>
-              <p class="m-0 pt-9 text-buttom">تنخواه گردان</p>
+              <p class="m-0 pt-3 text-buttom">تنخواه گردان</p>
             </div>
           </template>
         </Card>
@@ -174,7 +174,7 @@
                   />
                 </svg>
               </div>
-              <p class="m-0 pt-9">پرداخت</p>
+              <p class="m-0 pt-3">پرداخت</p>
             </div>
           </template>
         </Card>

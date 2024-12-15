@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="flex flex-row gap-x-3 mt-3">
-      <div class="basis-1/4">
+      <div class="basis-1/6">
         <Card class="cardout c1">
           <template #content>
             <div class="flex items-center justify-center cardmy">
@@ -43,12 +43,12 @@
                   />
                 </svg>
               </div>
-              <p class="m-0 pt-9 text-buttom">ایجاد نامه</p>
+              <p class="m-0 pt-3 text-buttom">ایجاد نامه</p>
             </div>
           </template>
         </Card>
       </div>
-      <div class="basis-1/4">
+      <div class="basis-1/6">
         <Card class="cardout c2">
           <template #content>
             <div class="flex items-center justify-center cardmy">
@@ -96,12 +96,12 @@
                   />
                 </svg>
               </div>
-              <p class="m-0 pt-9 text-buttom">مرخصی</p>
+              <p class="m-0 pt-3 text-buttom">مرخصی</p>
             </div>
           </template>
         </Card>
       </div>
-      <div class="basis-1/4">
+      <div class="basis-1/6">
         <Card class="cardout c3">
           <template #content>
             <div class="flex items-center justify-center cardmy">
@@ -158,12 +158,12 @@
                   />
                 </svg>
               </div>
-              <p class="m-0 pt-9 text-buttom">ماموریت</p>
+              <p class="m-0 pt-3 text-buttom">ماموریت</p>
             </div>
           </template>
         </Card>
       </div>
-      <div class="basis-1/4">
+      <div class="basis-1/6">
         <Card class="cardout c4">
           <template #content>
             <div class="flex items-center justify-center cardmy">
@@ -215,7 +215,7 @@
                   />
                 </svg>
               </div>
-              <p class="m-0 pt-9 text-buttom">گزارش</p>
+              <p class="m-0 pt-3 text-buttom">گزارش</p>
             </div>
           </template>
         </Card>
@@ -328,7 +328,7 @@
   }
   .cardout {
     box-shadow: 0px 0px 12px 0px #0000000f;
-    padding: 60px 0;
+    // padding: 60px 0;
     .text-buttom {
       font-weight: 400;
       font-size: 16px;
