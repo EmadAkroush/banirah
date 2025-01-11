@@ -488,7 +488,7 @@ export default {
         },
         {
           label: "کارتابل",
-          to: "/",
+          to: "/cartable",
           id: 5
         },
         {
