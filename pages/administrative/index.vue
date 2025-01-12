@@ -22,6 +22,7 @@
         <div class="basis-1/6">
           <Card class="cardout c1">
             <template #content>
+              <nuxt-link to="/administrative/purchase">
               <div class="flex items-center justify-center cardmy">
                 <div
                   class="in1 in flex items-center justify-center"
@@ -50,6 +51,7 @@
                 </div>
                 <p class="m-0 pt-3 text-buttom">درخواست خرید</p>
               </div>
+            </nuxt-link>
             </template>
           </Card>
         </div>

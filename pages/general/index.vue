@@ -76,6 +76,7 @@
       <div class="basis-1/6">
         <Card class="cardout c3">
           <template #content>
+            <nuxt-link to="/general/mission">
             <div class="flex items-center justify-center cardmy">
               <div
                 class="in3 in flex items-center justify-center"
@@ -132,6 +133,7 @@
               </div>
               <p class="m-0 pt-3 text-buttom">ماموریت</p>
             </div>
+          </nuxt-link>
           </template>
         </Card>
       </div>

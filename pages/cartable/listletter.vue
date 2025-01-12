@@ -73,7 +73,7 @@
               />
             </div>
           </div>
-          <nuxt-link to="/finance/newdeposit">
+          <nuxt-link to="/cartable/newrequst">
             <button
               class="border border-green-600 text-green-600 px-4 py-2 rounded"
             >
