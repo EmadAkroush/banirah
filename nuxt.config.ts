@@ -2,15 +2,21 @@
 import Aura from "@primevue/themes/aura";
 
 export default defineNuxtConfig({
-    devtools: { enabled: false },
-    modules: ["@nuxtjs/tailwindcss", "@primevue/nuxt-module"],
-    primevue: {
-        options: {
-            theme: {
-                preset: Aura,
-            },
-            ripple: true,
-        },
-        autoImport: true,
+  devtools: { enabled: false },
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@primevue/nuxt-module",
+
+
+ 
+  ],
+  primevue: {
+    options: {
+      theme: {
+        preset: Aura,
+      },
+      ripple: true,
     },
+    autoImport: true, // Auto-import PrimeVue components (if needed)
+  },
 });

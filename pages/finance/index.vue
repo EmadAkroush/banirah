@@ -22,7 +22,7 @@
       <div class="basis-1/6">
         <Card class="cardout c1">
           <template #content>
-            <nuxt-link to="finance/depositlist">
+            <nuxt-link to="/finance/depositlist">
               <div class="flex items-center justify-center cardmy">
                 <div
                   class="in1 in flex items-center justify-center"

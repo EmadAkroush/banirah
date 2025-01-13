@@ -243,7 +243,7 @@
             <div class="flex flex-row gap-3 mt-2">
               <Card
                 class="w-1/2"
-                style="box-shadow: none;  background-color: #F3F6F3;"
+                style="box-shadow: none; background-color: #f3f6f3"
               >
                 <template #title>
                   <div class="flex flex-row justify-between mb-12">
@@ -251,9 +251,12 @@
                       <span class="one"> شماره سفارش: </span>
                       <span class="two"> ۹۸۷۶۵۵۴۴۳۳ </span>
                     </div>
-                   
-                    <div class="right flex items-center justify-center" style="width: 150px;">
-                      <span class="ml-2">  تحویل داده شده </span>
+
+                    <div
+                      class="right flex items-center justify-center"
+                      style="width: 150px"
+                    >
+                      <span class="ml-2"> تحویل داده شده </span>
                       <span>
                         <img
                           src="/public/opration/icons-Line-tick-circle.png"
@@ -261,7 +264,6 @@
                         />
                       </span>
                     </div>
-                    
                   </div>
                 </template>
                 <template #content>
@@ -592,7 +594,7 @@
           </div>
         </div>
       </div>
-      <!-- <div class="mt-4 grid grid-cols-2 gap-4">
+      <div class="mt-4">
         <div
           class="card"
           style="
@@ -601,19 +603,25 @@
             box-shadow: 0px 0px 12px 0px #0000000f;
           "
         >
-          <div class="p-6 mx-auto">
-            <h2 class="text-2xl font-bold mb-4 text-right">
-              درخواست های پیش فرض
-            </h2>
-            <Chart
-              type="bar"
-              :data="chartData"
-              :options="chartOptions"
-              class="w-full"
-              style="height: 300px"
-            />
+          <div class="flex space-x-4">
+            <!-- نمودار ستونی -->
+            <div class="w-full bg-white rounded-lg shadow-md p-4">
+              <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
+                عنوان پیش فرض
+              </h3>
+              <Chart
+                type="bar"
+                :data="barChartData"
+                :options="chartOptions2"
+                style="height: 300px"
+              />
+            </div>
+
+            <!-- نمودار میله‌ای -->
           </div>
         </div>
+      </div>
+      <div class="mt-4">
         <div
           class="card"
           style="
@@ -622,20 +630,86 @@
             box-shadow: 0px 0px 12px 0px #0000000f;
           "
         >
-          <div class="mx-auto p-6">
-            <h2 class="text-2xl font-bold mb-4 text-right">
-              درخواست های پیش فرض
-            </h2>
-            <Chart
-              type="line"
-              :data="chartData1"
-              :options="chartOptions1"
-              class="w-full"
-              style="height: 300px"
-            />
+          <div class="flex space-x-4">
+            <!-- نمودار دایره‌ای (Pie) -->
+            <div class="w-1/3 bg-white rounded-lg p-4">
+              <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
+                عنوان پیش فرض
+              </h3>
+              <Chart
+                type="pie"
+                :data="pieChartData"
+                :options="chartOptions3"
+                style="height: 300px"
+              />
+            </div>
+
+            <!-- نمودار دونات (Doughnut) -->
+            <div class="w-1/3 bg-white rounded-lg p-4">
+              <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
+                عنوان پیش فرض
+              </h3>
+              <Chart
+                type="doughnut"
+                :data="doughnutChartData"
+                :options="chartOptions3"
+                style="height: 300px"
+              />
+            </div>
+
+            <!-- نمودار اشعه‌ای (Radar) -->
+            <div class="w-1/3 bg-white rounded-lg p-4">
+              <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
+                عنوان پیش فرض
+              </h3>
+              <Chart
+                type="radar"
+                :data="radarChartData"
+                :options="chartOptions3"
+                style="height: 300px"
+              />
+            </div>
           </div>
         </div>
-      </div> -->
+      </div>
+      <div class="mt-4">
+        <div
+          class="card"
+          style="
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0px 0px 12px 0px #0000000f;
+          "
+        >
+          <div class="flex space-x-4">
+            <!-- نمودار خطی -->
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4">
+              <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
+                درخواست‌های پیش‌فرض
+              </h3>
+              <Chart
+                type="line"
+                :data="lineChartData"
+                :options="chartOptions4"
+                style="height: 300px;"
+              />
+            </div>
+
+            <!-- نمودار ترکیبی (ستونی و خطی) -->
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4">
+              <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
+                عنوان پیش فرض
+              </h3>
+              <Chart
+                type="bar"
+                :data="barLineChartData"
+                :options="mixedChartOptions"
+                style="height: 300px;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -803,6 +877,192 @@ export default {
           },
         },
       },
+      barChartData: {
+        labels: [
+          "فروردین",
+          "اردیبهشت",
+          "خرداد",
+          "تیر",
+          "مرداد",
+          "شهریور",
+          "مهر",
+          "آبان",
+          "آذر",
+          "دی",
+          "بهمن",
+          "اسفند",
+        ],
+        datasets: [
+          {
+            label: "نمونه ارسال شده",
+            backgroundColor: "#4CAF50",
+            data: [65, 59, 80, 81, 56, 55, 40, 72, 65, 50, 66, 75],
+          },
+          {
+            label: "اشتراک باقی‌مانده",
+            backgroundColor: "#C8E6C9",
+            data: [28, 48, 40, 19, 86, 27, 90, 72, 44, 33, 68, 85],
+          },
+        ],
+      },
+      horizontalBarChartData: {
+        labels: ["A", "B", "C", "D", "E", "F", "G"],
+        datasets: [
+          {
+            label: "نمونه ارسال شده",
+            backgroundColor: "#4CAF50",
+            data: [75, 89, 60, 71, 96, 45, 50],
+          },
+          {
+            label: "اشتراک باقی‌مانده",
+            backgroundColor: "#C8E6C9",
+            data: [58, 68, 90, 29, 76, 37, 30],
+          },
+        ],
+      },
+      chartOptions2: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          position: "top",
+        },
+        title: {
+          display: true,
+          text: "",
+        },
+      },
+      pieChartData: {
+        labels: ["قرمز", "آبی", "زرد"],
+        datasets: [
+          {
+            data: [300, 50, 100],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
+      doughnutChartData: {
+        labels: ["قرمز", "آبی", "زرد"],
+        datasets: [
+          {
+            data: [200, 150, 100],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
+      radarChartData: {
+        labels: ["آیتم 1", "آیتم 2", "آیتم 3", "آیتم 4", "آیتم 5"],
+        datasets: [
+          {
+            label: "سری 1",
+            backgroundColor: "rgba(179,181,198,0.2)",
+            borderColor: "rgba(179,181,198,1)",
+            pointBackgroundColor: "rgba(179,181,198,1)",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(179,181,198,1)",
+            data: [65, 59, 90, 81, 56],
+          },
+          {
+            label: "سری 2",
+            backgroundColor: "rgba(255,99,132,0.2)",
+            borderColor: "rgba(255,99,132,1)",
+            pointBackgroundColor: "rgba(255,99,132,1)",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(255,99,132,1)",
+            data: [28, 48, 40, 19, 96],
+          },
+        ],
+      },
+      chartOptions3: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          position: "top",
+        },
+        title: {
+          display: false,
+        },
+      },
+      lineChartData: {
+        labels: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور'],
+        datasets: [
+          {
+            label: 'سری 1',
+            data: [30, 70, 80, 40, 85, 100],
+            borderColor: '#42A5F5',
+            fill: false,
+            tension: 0.4
+          },
+          {
+            label: 'سری 2',
+            data: [20, 60, 55, 90, 95, 40],
+            borderColor: '#FFA726',
+            fill: false,
+            tension: 0.4
+          },
+          {
+            label: 'سری 3',
+            data: [40, 40, 60, 100, 30, 80],
+            borderColor: '#66BB6A',
+            fill: false,
+            tension: 0.4
+          }
+        ]
+      },
+      barLineChartData: {
+        labels: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور'],
+        datasets: [
+          {
+            type: 'bar',
+            label: 'اشتراک فروش',
+            backgroundColor: '#66BB6A',
+            data: [60, 40, 80, 50, 70, 50]
+          },
+          {
+            type: 'line',
+            label: 'اشتراک افزایشی',
+            borderColor: '#FFA726',
+            backgroundColor: '#FFA726',
+            fill: false,
+            tension: 0.4,
+            data: [70, 45, 75, 60, 80, 55]
+          }
+        ]
+      },
+      chartOptions4: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          position: 'bottom'
+        },
+        title: {
+          display: false
+        }
+      },
+      mixedChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            beginAtZero: true
+          },
+          y: {
+            beginAtZero: true
+          }
+        },
+        legend: {
+          position: 'bottom'
+        },
+        title: {
+          display: false
+        }
+      }
+      
+      
+
     };
   },
 };

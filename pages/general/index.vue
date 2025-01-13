@@ -23,6 +23,7 @@
       <div class="basis-1/6">
         <Card class="cardout c2">
           <template #content>
+            <nuxt-link to="/general/Leave">
             <div class="flex items-center justify-center cardmy">
               <div
                 class="in2 in flex items-center justify-center"
@@ -70,6 +71,7 @@
               </div>
               <p class="m-0 pt-3 text-buttom">مرخصی</p>
             </div>
+          </nuxt-link>
           </template>
         </Card>
       </div>
@@ -333,7 +335,7 @@
     background-color: #f6fde7;
     border-radius: 50%;
   }
-cccccc
+
   .c2:hover {
     background-image: linear-gradient(
       48.55deg,
