@@ -111,12 +111,7 @@
                       for="select-date"
                       >انتخاب تاریخ</label
                     >
-                    <Calendar
-                      id="select-date"
-                      v-model="selectedDate"
-                      dateFormat="yy/mm/dd"
-                      class="w-full"
-                    />
+                    <PersianDatePicker v-model="selectedDate"    />
                   </div>
 
                   <!-- Description -->

@@ -48,11 +48,8 @@
 
               <div>
                 <label class="block text-right mb-2">تاریخ</label>
-                <Calendar
-                  v-model="form.date"
-                  placeholder="تاریخ را انتخاب کنید"
-                  class="w-full"
-                />
+                <PersianDatePicker v-model="selectedDate"    />
+                
               </div>
 
               <!-- Full Name -->

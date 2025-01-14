@@ -25,7 +25,7 @@
           <div class="flex justify-between items-center mb-4">
             <div class="flex items-center">
               <!-- <img class="w-10 h-10 rounded-full ml-4" src="path/to/avatar.png" alt="User Avatar"> -->
-              <div class="relative">
+              <div class="relative" style="margin-left: 8px;">
                 <img
                   src="/public/listbargiry/icons-Line-search.png"
                   alt=""
@@ -39,7 +39,7 @@
               
              
               </div>
-              <PersianDatePicker v-model="selectedDate" />
+              <PersianDatePicker v-model="selectedDate" range   />
             </div>
             <nuxt-link to="/operation/newrequest">
               <button

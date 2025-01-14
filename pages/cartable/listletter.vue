@@ -5,7 +5,7 @@
         <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
 
         <div class="mr-2 text-right">
-          <p class="text-right">تعریف لیست واریزی</p>
+          <p class="text-right">تعریف نامه ها </p>
         </div>
       </div>
       <div
@@ -60,7 +60,7 @@
                 </button>
               </div>
             </div>
-            <div class="relative">
+            <div class="relative"  style="margin-left: 8px;">
               <img
                 src="/public/listbargiry/icons-Line-search.png"
                 alt=""
@@ -70,8 +70,10 @@
                 type="text"
                 placeholder="جستجوی پیشرفته"
                 class="border rounded-lg px-8 py-2"
+               
               />
             </div>
+            <PersianDatePicker v-model="selectedDate" range   />
           </div>
           <nuxt-link to="/cartable/newrequst">
             <button

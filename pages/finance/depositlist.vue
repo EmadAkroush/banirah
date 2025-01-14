@@ -16,6 +16,7 @@
           <p class="ml-2">۱۷ اردیبهشت ۱۴۰۳</p>
         </div>
         <img src="/public/opration/Calender.svg" alt="" class="pic" />
+        
       </div>
     </div>
     <div class="card">
@@ -23,7 +24,7 @@
         <div class="flex justify-between items-center mb-4">
           <div class="flex items-center">
             <!-- <img class="w-10 h-10 rounded-full ml-4" src="path/to/avatar.png" alt="User Avatar"> -->
-            <div class="relative">
+            <div class="relative" style="margin-left: 8px;">
               <img
                 src="/public/listbargiry/icons-Line-search.png"
                 alt=""
@@ -35,6 +36,7 @@
                 class="border rounded-lg px-8 py-2"
               />
             </div>
+            <PersianDatePicker v-model="selectedDate" range   />
           </div>
           <nuxt-link to="/finance/newdeposit" >
             <button

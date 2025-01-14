@@ -50,12 +50,12 @@
             "
           >
             <div class="justify-between items-center py-4">
-              <h1 class="text-lg font-semibold">فرم درخواست بازیابی</h1>
+              <h1 class="text-lg font-semibold">فرم درخواست بارگیری</h1>
               <div class="p-6 mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div class="flex flex-col text-right">
                     <label for="date" class="mb-1">تاریخ</label>
-                    <Calendar id="date" class="w-full" />
+                    <PersianDatePicker v-model="selectedDate"    />
                   </div>
                   <div class="flex flex-col text-right">
                     <label for="source" class="mb-1"

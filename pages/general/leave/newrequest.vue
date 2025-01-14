@@ -109,27 +109,17 @@
                     >
                       تاریخ مرخصی
                     </label>
-                    <Calendar
-                      id="startTime"
-                      showIcon
-                      placeholder="Placeholder"
-                      class="w-full p-inputtext-sm"
-                    />
+                    <PersianDatePicker v-model="selectedDate"    />
                   </div>
 
                   <!-- ساعت شروع -->
-                  <div>
+                  <div >
                     <label
                       for="startTime"
                       class="block text-gray-600 mb-2 text-sm"
                       >ساعت شروع</label
                     >
-                    <Calendar
-                      id="startTime"
-                      showIcon
-                      placeholder="Placeholder"
-                      class="w-full p-inputtext-sm"
-                    />
+                    <PersianDatePicker class="w-full" v-model="selectedDate" type="time"    />
                   </div>
 
                   <!-- ساعت پایان -->
@@ -139,13 +129,7 @@
                       class="block text-gray-600 mb-2 text-sm"
                       >ساعت پایان</label
                     >
-                    <Calendar
-                      id="endTime"
-                      showIcon
-                      placeholder="Placeholder"
-                      class="w-full p-inputtext-sm"
-                      style="height: 52px"
-                    />
+                    <PersianDatePicker class="w-full" v-model="selectedDate" type="time"    />
                   </div>
 
                   <!-- توضیحات -->
