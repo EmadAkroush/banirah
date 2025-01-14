@@ -6,10 +6,10 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@primevue/nuxt-module",
-
-
  
   ],
+
+
   primevue: {
     options: {
       theme: {

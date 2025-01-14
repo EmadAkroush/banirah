@@ -36,7 +36,10 @@
                   placeholder="جستجوی پیشرفته"
                   class="border rounded-lg px-8 py-2"
                 />
+              
+             
               </div>
+              <PersianDatePicker v-model="selectedDate" />
             </div>
             <nuxt-link to="/operation/newrequest">
               <button
@@ -46,7 +49,7 @@
               </button>
             </nuxt-link>
           </div>
-
+       
           <div
             style="
               background-color: white;
@@ -56,7 +59,6 @@
               border-radius: 12px;
             "
           >
-       
             <DataTable :value="tableData" class="p-datatable-gridlines">
               <Column field="index" header="ردیف" sortable></Column>
               <Column field="task" header="وظیفه" sortable></Column>
@@ -163,9 +165,12 @@
 }
 </style>
 <script>
+
 export default {
+
   data() {
     return {
+      selectedDate: null,
       tableData: [
         {
           index: 1,
@@ -223,4 +228,3 @@ export default {
   },
 };
 </script>
- 

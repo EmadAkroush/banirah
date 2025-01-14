@@ -15,17 +15,17 @@
         <div class="basis-2/4">
           <div class="flex justify-end">
             <div class="flex items-center justify-center notif">
-              <OverlayBadge severity="danger">
+           
                 <img
                   src="/public/navbar/icons-Line-Mail.svg"          
                   alt=""
                 />
-              </OverlayBadge>
+             
             </div>
             <div class="flex items-center justify-center notif mr-4">
-              <OverlayBadge severity="danger">
+             
                 <img src="/public/navbar/icons-Line-notification.svg" alt="" />
-              </OverlayBadge>
+             
             </div>
           </div>
         </div>
