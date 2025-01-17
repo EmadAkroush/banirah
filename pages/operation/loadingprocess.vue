@@ -224,7 +224,27 @@ export default {
 
         // Repeat as needed...
       ],
+      product : null
     };
+    
+  },
+  methods: {
+    async getproduct() {
+      
+      try {
+       
+        this.product = await $fetch("/api/listwork");
+   
+      } catch (error) {
+        console.log(error);
+      } finally {
+        this.product = toRaw(this.product);
+        console.log("pr", toRaw(this.product.total));
+      }
+    },
+  },
+  beforeMount() {
+    this.getproduct();
   },
 };
 </script>

@@ -2,7 +2,7 @@ export default defineEventHandler(async (event) => {
     const body = await readBody(event);
     const { public: { apiBase } } = useRuntimeConfig()
     // const token = getCookie(event, 'token');
-  console.log("dddddd" , body);
+
   
     try {
         const data = await $fetch(`${apiBase}/workflow/oauth2/token`, {
@@ -12,6 +12,24 @@ export default defineEventHandler(async (event) => {
               'Accept': 'application/json'
             }
         })
+
+        
+        setCookie(event, 'tokenbanirah', data.access_token, {
+          httpOnly: true,
+          secure: true,
+          maxAge: 60 * 60 * 24 * 7, // 1 week
+          path: '/'
+      })
+     
+      
+      
+
+
+      
+
+       console.log("dgg" , data.access_token );
+       
+
        
         
         return data;
