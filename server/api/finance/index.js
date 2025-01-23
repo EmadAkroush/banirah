@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
     const tokenbanirah = getCookie(event, 'tokenbanirah')
 
     try {
-        const data = await $fetch(`${apiBase}/workflow/cases/participated/paged?start=1&limit=100`, {
+        const data = await $fetch(`${apiBase}/workflow/cases?cat_uid=96802186266d9bdaf519901085441746`, {
             headers: {
                 'Accept': 'application/json',
                 'Authorization': `Bearer ${tokenbanirah}`
@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
         });
         console.log("datam" , data );
 
-        return data.data;
+        return data;
     } catch (error) {
         if (error.statusCode == 401) {
             setCookie(event, 'token', '', {

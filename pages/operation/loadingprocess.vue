@@ -233,13 +233,13 @@ export default {
       
       try {
        
-        this.product = await $fetch("/api/listwork");
+        this.product = await $fetch("/api/operation");
    
       } catch (error) {
         console.log(error);
       } finally {
         this.product = toRaw(this.product);
-        console.log("pr", toRaw(this.product.total));
+        console.log("pr", toRaw(this.product));
       }
     },
   },

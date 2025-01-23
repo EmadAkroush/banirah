@@ -57,24 +57,24 @@
           "
         >
           <DataTable
-            :value="tableData"
+            :value="depositlist"
             class="p-datatable-gridlines"
             style="text-align: right"
           >
             <Column
-              field="index"
+              field="del_index"
               style="text-align: right"
               header="ردیف"
               sortable
             ></Column>
             <Column
-              field="vazife"
+              field="app_tas_title"
               style="text-align: right"
               header="وظیفه"
               sortable
             ></Column>
             <Column
-              field="from"
+              field="app_del_previous_user"
               style="text-align: right"
               header="ارسال از طرف"
               sortable
@@ -194,6 +194,7 @@
 <script>
 export default {
   data() {
+    
     return {
       tableData: [
         {
@@ -235,7 +236,28 @@ export default {
 
         // Repeat as needed...
       ],
+      depositlist : null
     };
   },
+  methods: {
+    async getdepositlist() {
+      
+      try {
+       
+        this.depositlist = await $fetch("/api/finance");
+   
+      } catch (error) {
+        console.log(error);
+      } finally {
+        this.depositlist = toRaw(this.depositlist);
+        console.log("pr", toRaw(this.depositlist));
+      }
+    },
+  },
+  beforeMount() {
+    this.getdepositlist();
+  },
+
+
 };
 </script>
