@@ -223,18 +223,16 @@
         <!-- Card Grid -->
         <div class="grid grid-cols-3 gap-6 mt-4">
           <!-- Internal Letter Card -->
-          <nuxt-link to="/cartable/listletter">
+          <nuxt-link to="/administrative/contract/gas">
             <div
               class="flex flex-col items-center rounded-xl p-6 transition hover:scale-105 cursor-pointer shadow-md"
             >
               <!-- Icon -->
               <div
-                class="w-20 h-20 flex items-center justify-center bg-green-200 rounded-full shadow text-green-600" style="background-color: #FFF4E0;"
+                class="w-20 h-20 flex items-center justify-center bg-green-200 rounded-full shadow text-green-600"
+                style="background-color: #fff4e0"
               >
-                <img
-                  src="/public/Contract/icons-Line-gas.png"
-                  alt=""
-                />
+                <img src="/public/Contract/icons-Line-gas.png" alt="" />
               </div>
               <!-- Label -->
               <p class="mt-3 text-gray-600 font-medium">حمل گاز</p>
@@ -242,40 +240,42 @@
           </nuxt-link>
 
           <!-- External Letter Card -->
-          <div
-            class="flex flex-col items-center rounded-xl p-6 transition hover:scale-105 cursor-pointer shadow-md"
-            
-          >
-            <!-- Icon -->
+          <nuxt-link to="/administrative/contract/driver">
             <div
-              class="w-20 h-20 flex items-center justify-center bg-purple-200 rounded-full shadow text-purple-600" style="background-color: #EEEBFC;"
+              class="flex flex-col items-center rounded-xl p-6 transition hover:scale-105 cursor-pointer shadow-md"
             >
-              <img
-                src="/public/Contract/icons-Line-driver.png"
-                alt=""
-              />
-              <i class="pi pi-upload text-2xl"></i>
+              <!-- Icon -->
+              <div
+                class="w-20 h-20 flex items-center justify-center bg-purple-200 rounded-full shadow text-purple-600"
+                style="background-color: #eeebfc"
+              >
+                <img src="/public/Contract/icons-Line-driver.png" alt="" />
+                <i class="pi pi-upload text-2xl"></i>
+              </div>
+              <!-- Label -->
+              <p class="mt-3 text-gray-600 font-medium">شرکت با راننده</p>
             </div>
-            <!-- Label -->
-            <p class="mt-3 text-gray-600 font-medium">شرکت با راننده</p>
-          </div>
+          </nuxt-link>
           <!-- External Letter Card -->
-          <div
-            class="flex flex-col items-center rounded-xl p-6 transition hover:scale-105 cursor-pointer shadow-md"
-          >
-            <!-- Icon -->
+          <nuxt-link to="/administrative/contract/forwarder">
             <div
-              class="w-20 h-20 flex items-center justify-center bg-purple-200 rounded-full shadow text-purple-600" style="background-color: #EBFCFF;"
+              class="flex flex-col items-center rounded-xl p-6 transition hover:scale-105 cursor-pointer shadow-md"
             >
-              <img
-                src="/public/Contract/icons-Line-business-card.png"
-                alt=""
-              />
-              <i class="pi pi-upload text-2xl"></i>
+              <!-- Icon -->
+              <div
+                class="w-20 h-20 flex items-center justify-center bg-purple-200 rounded-full shadow text-purple-600"
+                style="background-color: #ebfcff"
+              >
+                <img
+                  src="/public/Contract/icons-Line-business-card.png"
+                  alt=""
+                />
+                <i class="pi pi-upload text-2xl"></i>
+              </div>
+              <!-- Label -->
+              <p class="mt-3 text-gray-600 font-medium">فورواردری</p>
             </div>
-            <!-- Label -->
-            <p class="mt-3 text-gray-600 font-medium">فورواردری</p>
-          </div>
+          </nuxt-link>
         </div>
         <!-- Card Grid -->
         <div class="grid grid-cols-3 gap-6 mt-4">
@@ -283,60 +283,48 @@
           <nuxt-link to="/cartable/listletter">
             <div
               class="flex flex-col items-center rounded-xl p-6 transition hover:scale-105 cursor-pointer shadow-md"
-              
             >
               <!-- Icon -->
               <div
                 class="w-20 h-20 flex items-center justify-center bg-green-200 rounded-full shadow text-green-600"
-                style="background-color: #FFE8E8;"
+                style="background-color: #ffe8e8"
               >
-                <img
-                  src="/public/Contract/Frame 16.png"
-                  alt=""
-                />
+                <img src="/public/Contract/Frame 16.png" alt="" />
               </div>
               <!-- Label -->
-              <p class="mt-3 text-gray-600 font-medium"> کریری</p>
+              <p class="mt-3 text-gray-600 font-medium">کریری</p>
             </div>
           </nuxt-link>
 
           <!-- External Letter Card -->
           <div
             class="flex flex-col items-center rounded-xl p-6 transition hover:scale-105 cursor-pointer shadow-md"
-         
           >
             <!-- Icon -->
             <div
               class="w-20 h-20 flex items-center justify-center bg-purple-200 rounded-full shadow text-purple-600"
-                 style="background-color: #E8FCF4;"
+              style="background-color: #e8fcf4"
             >
-              <img
-                src="/public/Contract/icons-Line-money-change.png"
-                alt=""
-              />
+              <img src="/public/Contract/icons-Line-money-change.png" alt="" />
               <i class="pi pi-upload text-2xl"></i>
             </div>
             <!-- Label -->
-            <p class="mt-3 text-gray-600 font-medium"> ؟؟؟ </p>
+            <p class="mt-3 text-gray-600 font-medium">؟؟؟</p>
           </div>
           <!-- External Letter Card -->
           <div
             class="flex flex-col items-center rounded-xl p-6 transition hover:scale-105 cursor-pointer shadow-md"
-           
           >
             <!-- Icon -->
             <div
               class="w-20 h-20 flex items-center justify-center bg-purple-200 rounded-full shadow text-purple-600"
-               style="background-color: #E8FCF4;"
+              style="background-color: #e8fcf4"
             >
-              <img
-             src="/public/Contract/icons-Line-money-change.png"
-                alt=""
-              />
+              <img src="/public/Contract/icons-Line-money-change.png" alt="" />
               <i class="pi pi-upload text-2xl"></i>
             </div>
             <!-- Label -->
-            <p class="mt-3 text-gray-600 font-medium"> ؟؟؟ </p>
+            <p class="mt-3 text-gray-600 font-medium">؟؟؟</p>
           </div>
         </div>
       </Dialog>
@@ -633,6 +621,11 @@ export default {
   data() {
     return {
       showModal: false,
+      dropdownOptions: [
+        { label: "Option 1", value: 1 },
+        { label: "Option 2", value: 2 },
+        // Add more options as needed
+      ],
     };
   },
 };
