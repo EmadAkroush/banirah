@@ -37,7 +37,7 @@
             </div>
             <PersianDatePicker v-model="selectedDate" range   />
           </div>
-          <nuxt-link to="/administrative/defineperson">
+          <nuxt-link to="/administrative/person/defineperson">
             <button
               class="border border-green-600 text-green-600 px-4 py-2 rounded"
             >

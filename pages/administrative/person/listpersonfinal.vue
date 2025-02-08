@@ -58,14 +58,14 @@
             
             </div>
             <div class="flex justify-end mt-4">
-              <nuxt-link to="/administrative/defineperson">
+              <nuxt-link to="/administrative/person/defineperson">
                 <Button
                   label="درخواست جدید"
                   class="p-button-outlined"
                   style="width: 150px; color: #246020; border: 1px solid #246020"
                 />
               </nuxt-link>
-              <nuxt-link to="/administrative">
+              <nuxt-link to="/administrative/person">
                 <Button
                   label="صفحه اصلی"
                   class="mr-2 bg-green-600 text-white"

@@ -20,58 +20,49 @@
     </div>
     <div>
       <div class="p-8 bg-white rounded-lg mx-auto mt-8">
-        <h2 class="text-xl font-semibold mb-4">قرارداد حمل گاز</h2>
+        <h2 class="text-xl font-semibold mb-4">قرارداد کریری</h2>
         <form class="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div>
-            <label for="firstName" class="block text-gray-700"
-              >نام و نام خانوادگی</label
-            >
+            <label for="firstName" class="block text-gray-700">نام شرکت</label>
             <InputText
               id="firstName"
               v-model="form.firstName"
               class="mt-1 block w-full"
-              placeholder="نام و نام خانوادگی"
+              placeholder="نام و نام خانوادگی "
             />
           </div>
           <div>
-            <label for="email" class="block text-gray-700">نام پدر</label>
+            <label for="email" class="block text-gray-700"
+              >نام و نام خانوادگی نماینده</label
+            >
             <InputText
               id="email"
               v-model="form.email"
               class="mt-1 block w-full"
-              placeholder="نام پدر"
+              placeholder="نام "
             />
           </div>
           <div>
-            <label for="kodemeli" class="block text-gray-700">کدملی</label>
+            <label for="phone" class="block text-gray-700">کدملی</label>
             <InputText
-              id="kodemeli"
+              id="phone"
               v-model="form.phone"
               class="mt-1 block w-full"
               placeholder="کدملی"
             />
           </div>
+
           <div>
-            <label for="phone" class="block text-gray-700">شماره تلفن</label>
+            <label for="date" class="block text-gray-700">شماره تلفن</label>
             <InputText
               id="phone"
               v-model="form.phone"
               class="mt-1 block w-full"
-              placeholder="شماره تلفن"
+              placeholder="0920008885 "
             />
           </div>
           <div>
-            <label for="qty" class="block text-gray-700">آدرس</label>
-            <InputNumber
-              id="qty"
-              v-model="form.qty"
-              class="mt-1 block w-full"
-            />
-          </div>
-          <div>
-            <label for="address" class="block text-gray-700"
-              >شماره انتظامی</label
-            >
+            <label for="address" class="block text-gray-700"> آدرس</label>
             <InputText
               id="address"
               v-model="form.address"
@@ -79,6 +70,59 @@
               placeholder="0920008885"
             />
           </div>
+          <div class="flex flex-col text-right">
+            <label for="product-type" class="mb-1 text-gray-700"> نوع کالا</label>
+            <Dropdown
+              id="product-type"
+              :options="dropdownOptions"
+              optionLabel="label"
+              placeholder="یک مورد را انتخاب کنید"
+              class="w-full"
+            />
+          </div>
+          <div>
+            <label for="address" class="block text-gray-700"> وزن کالا</label>
+            <InputText
+              id="address"
+              v-model="form.address"
+              class="mt-1 block w-full"
+              placeholder="0920008885"
+            />
+          </div>
+          <div class="flex flex-col text-right">
+            <label for="product-type" class="mb-1 text-gray-700"> مبدا  </label>
+            <Dropdown
+              id="product-type"
+              :options="dropdownOptions"
+              optionLabel="label"
+              placeholder="یک مورد را انتخاب کنید"
+              class="w-full"
+            />
+          </div>
+          <div class="flex flex-col text-right">
+            <label for="product-type" class="mb-1 text-gray-700"> مقصد  </label>
+            <Dropdown
+              id="product-type"
+              :options="dropdownOptions"
+              optionLabel="label"
+              placeholder="یک مورد را انتخاب کنید"
+              class="w-full"
+            />
+          </div>
+          <div class="flex flex-col text-right">
+            <label for="product-type" class="mb-1 text-gray-700"> گمرک خروجی  </label>
+            <Dropdown
+              id="product-type"
+              :options="dropdownOptions"
+              optionLabel="label"
+              placeholder="یک مورد را انتخاب کنید"
+              class="w-full"
+            />
+          </div>
+
+
+
+
           <div>
             <label for="date" class="mb-2 text-gray-700">تاریخ</label>
             <PersianDatePicker v-model="selectedDate" class="mt-2" />
@@ -91,6 +135,15 @@
               optionLabel="label"
               placeholder="یک مورد را انتخاب کنید"
               class="w-full"
+            />
+          </div>
+          <div>
+            <label for="address" class="block text-gray-700"> قیمت هر تناژ </label>
+            <InputText
+              id="address"
+              v-model="form.address"
+              class="mt-1 block w-full"
+              placeholder="ریال"
             />
           </div>
           <div class="flex flex-col text-right">
@@ -110,7 +163,6 @@
               </template>
             </FileUpload>
           </div>
-          <div class="flex flex-col text-right"></div>
           <div class="flex flex-col text-right">
             <div class="flex items-center gap-2">
               <Checkbox
@@ -127,23 +179,23 @@
 
           <!-- Action Buttons -->
           <div class="col-span-2 flex justify-end mt-4">
-            <Button
-              label="انصراف"
-              class="p-button-outlined"
-              style="color: #246020; border: 1px solid #246020; width: 150px"
-            />
-
-            <nuxt-link to="/administrative/Contract/gas/final">
+            <nuxt-link to="">
               <Button
-                label="ثبت"
-                class="text-white px-4 py-2 mr-3"
-                style="
-                  background-color: #246020;
-                  border: 1px solid #246020;
-                  width: 150px;
-                "
+                label="انصراف"
+                class="p-button-outlined"
+                style="color: #246020; border: 1px solid #246020; width: 150px"
               />
             </nuxt-link>
+
+            <Button
+              label="ثبت"
+              class="text-white px-4 py-2 mr-3"
+              style="
+                background-color: #246020;
+                border: 1px solid #246020;
+                width: 150px;
+              "
+            />
           </div>
         </form>
       </div>

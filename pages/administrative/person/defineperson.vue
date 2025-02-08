@@ -178,7 +178,7 @@
               <nuxt-link to="">
                 <Button label="انصراف" class="p-button-outlined"  style="color: #246020; border: 1px solid #246020; width: 150px;"  />
               </nuxt-link>
-              <nuxt-link to="/administrative/listpersonfinal">
+              <nuxt-link to="/administrative/person/listpersonfinal">
                 <Button
                   label="ثبت"
                   class=" text-white px-4 py-2 mr-3"

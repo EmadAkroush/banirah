@@ -131,7 +131,7 @@
                 id="product-type"
                 :options="dropdownOptions"
                 optionLabel="label"
-                placeholder="یک مورد را انتخاب کنید"
+                placeholder="یک مورد را انتخاب کنید" 
                 class="w-full"
               />
             </div>
@@ -159,6 +159,17 @@
                 class="w-full"
               />
             </div>
+            <div>
+              <label for="address" class="block text-gray-700"
+                >  قیمت هر تناژ</label
+              >
+              <InputText
+                id="address"
+                v-model="form.address"
+                class="mt-1 block w-full"
+                placeholder="دلار"
+              />
+            </div>
             <div class="flex flex-col text-right">
               <label for="product-type" class="mb-1 text-gray-700">بارگذاری امضاء </label>
               <FileUpload
@@ -174,9 +185,7 @@
                 </template>
               </FileUpload>
             </div>
-            <div class="flex flex-col  text-right">
-           
-            </div>
+          
             <div class="flex flex-col  text-right">
               <div class="flex items-center gap-2">
                 <Checkbox

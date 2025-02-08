@@ -108,7 +108,7 @@
       <div class="basis-1/6">
         <Card class="cardout c3">
           <template #content>
-            <nuxt-link to="/administrative/listperson">
+            <nuxt-link to="/administrative/person">
               <div class="flex items-center justify-center cardmy">
                 <div
                   class="in3 in flex items-center justify-center"
@@ -280,7 +280,7 @@
         <!-- Card Grid -->
         <div class="grid grid-cols-3 gap-6 mt-4">
           <!-- Internal Letter Card -->
-          <nuxt-link to="/cartable/listletter">
+          <nuxt-link to="/administrative/contract/carier">
             <div
               class="flex flex-col items-center rounded-xl p-6 transition hover:scale-105 cursor-pointer shadow-md"
             >
