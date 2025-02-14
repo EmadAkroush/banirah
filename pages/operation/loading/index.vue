@@ -41,7 +41,7 @@
               </div>
               <PersianDatePicker v-model="selectedDate" range   />
             </div>
-            <nuxt-link to="/operation/newrequest">
+            <nuxt-link to="/operation/loading/newrequest">
               <button
                 class="border border-green-600 text-green-600 px-4 py-2 rounded"
               >
@@ -59,9 +59,9 @@
               border-radius: 12px;
             "
           >
-            <DataTable :value="tableData" class="p-datatable-gridlines">
-              <Column field="index" header="ردیف" sortable></Column>
-              <Column field="task" header="وظیفه" sortable></Column>
+            <DataTable :value="product" class="p-datatable-gridlines">
+              <Column field="del_index" header="ردیف" sortable></Column>
+              <Column field="app_tas_title" header="وظیفه" sortable></Column>
               <Column field="sender" header="ارسال از طرف" sortable>
                 <template #body="slotProps">
                   <div class="flex items-center">
@@ -70,7 +70,7 @@
                       alt="Sender Avatar"
                       class="w-8 h-8 rounded-full ml-2"
                     />
-                    {{ slotProps.data.senderName }}
+                    {{ slotProps.data.app_del_previous_user }}
                   </div>
                 </template>
               </Column>
@@ -233,7 +233,7 @@ export default {
       
       try {
        
-        this.product = await $fetch("/api/operation");
+        this.product = await $fetch("/api/operation/loading");
    
       } catch (error) {
         console.log(error);

@@ -475,6 +475,7 @@ export default {
           label: "عملیات",
           to: "/operation",
           id: 2
+          
         },
         {
           label: "اداری",

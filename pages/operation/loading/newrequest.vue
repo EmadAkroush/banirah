@@ -55,7 +55,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div class="flex flex-col text-right">
                     <label for="date" class="mb-1">تاریخ</label>
-                    <PersianDatePicker v-model="selectedDate"    />
+                    <PersianDatePicker v-model="selectedDate" />
                   </div>
                   <div class="flex flex-col text-right">
                     <label for="source" class="mb-1"
@@ -219,10 +219,10 @@
                   </Column>
 
                   <!-- Add more columns as needed -->
-                  <template #footer >
+                  <template #footer>
                     <div
-                    style="background-color: #F3F6F3;"
-                      class="flex justify-start items-center  p-2"
+                      style="background-color: #f3f6f3"
+                      class="flex justify-start items-center p-2"
                     >
                       <span class="text-right text-lg font-bold"
                         >جمع کل تناژ</span
@@ -244,13 +244,13 @@
                       border: 1px solid #246020;
                     "
                   />
-                  <nuxt-link to="/operation/loadingfinal">
-                  <Button
-                    label="ثبت"
-                    class="mr-2 bg-green-600 text-white"
-                    style="width: 150px; background-color: #246020"
-                  />
-                </nuxt-link>
+                  <nuxt-link to="/operation/loading/loadingfinal">
+                    <Button
+                      label="ثبت"
+                      class="mr-2 bg-green-600 text-white"
+                      style="width: 150px; background-color: #246020"
+                    />
+                  </nuxt-link>
                 </div>
               </div>
             </div>
