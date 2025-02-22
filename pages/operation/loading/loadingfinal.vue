@@ -75,7 +75,7 @@
             <span>صفحه شماره ۲</span>
           </div>
           <div class="flex justify-end mt-4">
-            <nuxt-link to="/operation/newrequest">
+            <nuxt-link to="/operation/loading/newrequest">
               <Button
                 label="درخواست جدید"
                 class="p-button-outlined"

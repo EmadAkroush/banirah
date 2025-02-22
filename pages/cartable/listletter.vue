@@ -39,6 +39,17 @@
                 <button
                   class="px-4 py-2 rounded-md text-gray-600 bg-gray-200 hover:bg-gray-300"
                   :class="{
+                    'bg-white text-gray-800 font-semibold shadow draft':
+                      activeTab === 'draft',
+                  }"
+                  @click="setActiveTab('draft')"
+                >
+                پیش نویس ها
+                </button>
+                <!-- نامه های دریافتی -->
+                <button
+                  class="px-4 py-2 rounded-md text-gray-600 bg-gray-200 hover:bg-gray-300"
+                  :class="{
                     'bg-white text-gray-800 font-semibold shadow received':
                       activeTab === 'received',
                   }"
@@ -68,7 +79,7 @@
               />
               <input
                 type="text"
-                placeholder="جستجوی پیشرفته"
+                placeholder="جستجوی نامه"
                 class="border rounded-lg px-8 py-2"
                
               />
@@ -79,7 +90,7 @@
             <button
               class="border border-green-600 text-green-600 px-4 py-2 rounded"
             >
-              درخواست جدید
+              نامه جدید
             </button>
           </nuxt-link>
         </div>
@@ -180,6 +191,9 @@
   .received {
     background-color: white;
   }
+  .draft {
+    background-color: white;
+  }
   .sent {
     background-color: white;
   }
@@ -251,7 +265,7 @@ export default {
   data() {
     return {
       activeTab: "received", // تب پیش‌فرض
-
+    
       tableData: [
         {
           index: 1,

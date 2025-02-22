@@ -25,18 +25,7 @@
           <div class="flex justify-between items-center mb-4">
             <div class="flex items-center">
               <!-- <img class="w-10 h-10 rounded-full ml-4" src="path/to/avatar.png" alt="User Avatar"> -->
-              <div class="relative">
-                <img
-                  src="/public/listbargiry/icons-Line-search.png"
-                  alt=""
-                  style="position: absolute; top: 8px; left: 10px"
-                />
-                <input
-                  type="text"
-                  placeholder="جستجوی پیشرفته"
-                  class="border rounded-lg px-8 py-2"
-                />
-              </div>
+           
             </div>
           </div>
 
@@ -53,10 +42,7 @@
               <h1 class="text-lg font-semibold">فرم درخواست بارگیری</h1>
               <div class="p-6 mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div class="flex flex-col text-right">
-                    <label for="date" class="mb-1">تاریخ</label>
-                    <PersianDatePicker v-model="selectedDate" />
-                  </div>
+              
                   <div class="flex flex-col text-right">
                     <label for="source" class="mb-1"
                       >مبدا <span class="text-red-500">*</span></label
@@ -116,12 +102,16 @@
                     />
                   </div>
 
-                  <div class="flex flex-col text-right col-span-2">
+                  <div class="flex flex-col text-right">
                     <label for="amount" class="mb-1"
                       >مبلغ پرداختی به راننده
                       <span class="text-red-500">*</span></label
                     >
                     <InputText id="amount" placeholder="ریال" class="w-full" />
+                  </div>
+                  <div class="flex flex-col text-right">
+                    <label for="date" class="mb-1">تاریخ بارگیری</label>
+                    <PersianDatePicker v-model="selectedDate" />
                   </div>
                 </div>
               </div>
@@ -134,7 +124,7 @@
                   "
                   class="mb-4 px-4 py-2 text-white rounded flex items-center"
                 >
-                  <i class="pi pi-plus mr-2"></i> ردیف جدید
+                  <i class="pi pi-plus mr-2"></i> افزودن  راننده
                 </button>
                 <DataTable
                   :value="items"

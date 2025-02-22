@@ -150,7 +150,7 @@
           </div>
         </div>
         <div class="col-span-8">
-          <div
+          <!-- <div
             class="card"
             style="
               background-color: #ffffff;
@@ -175,12 +175,12 @@
                       <div
                         class="flex justify-between items-center text-right mb-4"
                       >
-                        <!-- Rating Section -->
+                      
                         <div class="flex space-x-2">
                           <i
                             class="pi pi-star-fill text-yellow-400 text-lg"
                           ></i>
-                          <!-- PrimeVue Icon -->
+                        
                           <img src="/public/dashboard/Star 1.png" alt="" />
                           <span class="text-lg font-semibold text-center"
                             >۴.۹</span
@@ -189,7 +189,7 @@
                       </div>
 
                       <div class="flex text-gray-700 text-sm">
-                        <!-- Model and Load Volume Information -->
+                     
                         <div class="mb-2" style="line-height: 40px">
                           <p class="font-medium">
                             <span style="color: #9ca3af" class="ml-2">
@@ -204,7 +204,6 @@
                           </p>
                         </div>
 
-                        <!-- Space Utilization and Weight -->
                         <div class="mr-8" style="line-height: 40px">
                           <p class="font-medium">
                             <span style="color: #9ca3af" class="ml-2">فضا</span>
@@ -220,24 +219,24 @@
                   </div>
                 </TabPanel>
                 <TabPanel header="جزئیات سفارش">
-                  <!-- Content for جزئیات سفارش -->
+
                 </TabPanel>
                 <TabPanel header="اطلاعات ارسال">
-                  <!-- Content for اطلاعات ارسال -->
+       
                 </TabPanel>
                 <TabPanel header="اطلاعات بارگیری">
-                  <!-- Content for اطلاعات بارگیری -->
+   
                 </TabPanel>
                 <TabPanel header="اطلاعات راننده">
-                  <!-- Content for اطلاعات راننده -->
+          
                 </TabPanel>
               </TabView>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="flex flex-row">
-        <Card class="card-bar mt-4">
+        <!-- <Card class="card-bar mt-4">
           <template #title> <h2>درخواست های تحویل بار</h2> </template>
           <template #content>
             <div class="flex flex-row gap-3 mt-2">
@@ -339,7 +338,7 @@
               </Card>
             </div>
           </template>
-        </Card>
+        </Card> -->
       </div>
       <div class="grid grid-cols-12 gap-4 mt-4">
         <div class="col-span-4">
@@ -470,7 +469,7 @@
           </div>
         </div>
         <div class="col-span-4">
-          <div
+          <!-- <div
             class="card"
             style="
               background-color: #ffffff;
@@ -501,11 +500,11 @@
               <Column field="category" header="تاریخ درخواست	"></Column>
               <Column field="price" header="وضعیت"></Column>
             </DataTable>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="mt-4">
-        <div
+        <!-- <div
           class="card"
           style="
             background-color: #ffffff;
@@ -592,7 +591,7 @@
               </tbody>
             </table>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="mt-4">
         <div
@@ -658,7 +657,7 @@
             </div>
 
             <!-- نمودار اشعه‌ای (Radar) -->
-            <div class="w-1/3 bg-white rounded-lg p-4">
+            <!-- <div class="w-1/3 bg-white rounded-lg p-4">
               <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
                 عنوان پیش فرض
               </h3>
@@ -668,7 +667,7 @@
                 :options="chartOptions3"
                 style="height: 300px"
               />
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

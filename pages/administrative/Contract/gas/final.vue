@@ -5,7 +5,7 @@
         <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
 
         <div class="mr-2 text-right">
-          <p class="text-right">درخواست بارگیری</p>
+          <p class="text-right"> قرارداد</p>
         </div>
       </div>
       <div
@@ -103,7 +103,7 @@
               />
             </div>
             <div>
-              <nuxt-link to="/administrative/person/defineperson">
+              <nuxt-link to="/administrative/Contract/gas">
                 <Button
                   label="درخواست جدید"
                   class="p-button-outlined"
@@ -114,7 +114,7 @@
                   "
                 />
               </nuxt-link>
-              <nuxt-link to="/administrative/person">
+              <nuxt-link to="/administrative">
                 <Button
                   label="صفحه اصلی"
                   class="mr-2 bg-green-600 text-white"

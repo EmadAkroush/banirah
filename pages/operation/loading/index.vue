@@ -33,7 +33,7 @@
                 />
                 <input
                   type="text"
-                  placeholder="جستجوی پیشرفته"
+                  placeholder=" جستجو بار"
                   class="border rounded-lg px-8 py-2"
                 />
               
@@ -45,7 +45,7 @@
               <button
                 class="border border-green-600 text-green-600 px-4 py-2 rounded"
               >
-                درخواست جدید
+                درخواست بارگیری
               </button>
             </nuxt-link>
           </div>
