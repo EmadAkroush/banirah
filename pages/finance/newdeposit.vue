@@ -25,18 +25,7 @@
           <div class="flex justify-between items-center mb-4">
             <div class="flex items-center">
               <!-- <img class="w-10 h-10 rounded-full ml-4" src="path/to/avatar.png" alt="User Avatar"> -->
-              <div class="relative">
-                <img
-                  src="/public/listbargiry/icons-Line-search.png"
-                  alt=""
-                  style="position: absolute; top: 8px; left: 10px"
-                />
-                <input
-                  type="text"
-                  placeholder="جستجوی پیشرفته"
-                  class="border rounded-lg px-8 py-2"
-                />
-              </div>
+    
             </div>
           </div>
 

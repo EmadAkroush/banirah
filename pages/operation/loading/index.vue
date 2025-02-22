@@ -61,7 +61,15 @@
           >
             <DataTable :value="product" class="p-datatable-gridlines">
               <Column field="del_index" header="ردیف" sortable></Column>
-              <Column field="app_tas_title" header="وظیفه" sortable></Column>
+              <Column field="app_tas_title" header="وظیفه" sortable>
+                <template #body="slotProps">
+                  <div class="flex items-center">
+                    <nuxt-link to="/finance/newdeposit">
+                    {{ slotProps.data.app_tas_title }}
+                    </nuxt-link>
+                  </div>
+                </template>
+              </Column>
               <Column field="sender" header="ارسال از طرف" sortable>
                 <template #body="slotProps">
                   <div class="flex items-center">

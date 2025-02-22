@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="flex flex-row gap-x-3 mt-3">
-      <div class="basis-1/6">
+      <!-- <div class="basis-1/6">
         <Card class="cardout c1">
           <template #content>
             <nuxt-link to="/finance/depositlist">
@@ -85,7 +85,7 @@
             </nuxt-link>
           </template>
         </Card>
-      </div>
+      </div> -->
 
       <div class="basis-1/6">
         <Card class="cardout c3">
@@ -179,6 +179,65 @@
           </template>
         </Card>
       </div>
+
+      <div class="basis-1/6">
+        <Card class="cardout cr">
+          <template #content>
+            <div class="flex items-center justify-center cardmy">
+              <div
+                class="inr in flex items-center justify-center"
+                style="width: 76px; height: 76px"
+              >
+                <svg
+                  width="38"
+                  height="38"
+                  viewBox="0 0 38 38"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.656 31.192C11.9543 29.7987 13.9335 29.9095 15.0735 31.4295L16.6726 33.567C17.9551 35.2612 20.0293 35.2612 21.3118 33.567L22.911 31.4295C24.051 29.9095 26.0301 29.7987 27.3285 31.192C30.1468 34.2003 32.4426 33.2028 32.4426 28.9912V11.147C32.4585 4.76616 30.9701 3.16699 24.9851 3.16699H13.0151C7.03014 3.16699 5.54181 4.76616 5.54181 11.147V28.9753C5.54181 33.2028 7.85348 34.1845 10.656 31.192Z"
+                    stroke="#3CAFB6"
+                    stroke-width="2.38771"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.8187 17.4167H12.8329"
+                    stroke="#3CAFB6"
+                    stroke-width="2.38771"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.2557 17.417H25.9641"
+                    stroke="#3CAFB6"
+                    stroke-width="2.38771"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.8187 11.0837H12.8329"
+                    stroke="#3CAFB6"
+                    stroke-width="2.38771"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.2557 11.083H25.9641"
+                    stroke="#3CAFB6"
+                    stroke-width="2.38771"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p class="m-0 pt-3 text-buttom">گزارش</p>
+            </div>
+          </template>
+        </Card>
+      </div>
+
     </div>
 
     <div>
@@ -296,6 +355,23 @@
   .in6 {
     background-color: #f6fde7;
     border-radius: 50%;
+  }
+  .inr {
+    background-color: #E5F8F9;
+    border-radius: 50%;
+  }
+  .cr:hover {
+    background-image: linear-gradient(
+      48.55deg,
+      #fdfdfd -1.31%,
+      #f2f8ff 106.19%
+    );
+    .inr {
+      background-color: #3CAFB6;
+      path {
+        stroke: white;
+      }
+    }
   }
   .c1 {
     transition-delay: 20s;
