@@ -83,6 +83,10 @@
                   class="w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-indigo-100"
                 />
               </div>
+
+
+
+
               <div class="flex justify-between">
                 <div class="card flex flex-col items-center gap-6">
                   <FileUpload

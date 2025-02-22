@@ -120,9 +120,13 @@ export default {
 </script>
 
 <style lang="scss">
+  .p-dialog-header-actions {
+    display: none;
+  }
 .cartable {
   background-color: #f3f4f6;
   min-height: 100vh;
+
   .p-datatable-header-cell {
     background-color: #f5f5f5;
     color: #888888;

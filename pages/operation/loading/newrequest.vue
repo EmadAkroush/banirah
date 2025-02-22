@@ -25,7 +25,6 @@
           <div class="flex justify-between items-center mb-4">
             <div class="flex items-center">
               <!-- <img class="w-10 h-10 rounded-full ml-4" src="path/to/avatar.png" alt="User Avatar"> -->
-           
             </div>
           </div>
 
@@ -42,7 +41,6 @@
               <h1 class="text-lg font-semibold">فرم درخواست بارگیری</h1>
               <div class="p-6 mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              
                   <div class="flex flex-col text-right">
                     <label for="source" class="mb-1"
                       >مبدا <span class="text-red-500">*</span></label
@@ -122,9 +120,10 @@
                     color: #246020;
                     border: 1px solid #246020;
                   "
+                  @click="createdriver = !createdriver"
                   class="mb-4 px-4 py-2 text-white rounded flex items-center"
                 >
-                  <i class="pi pi-plus mr-2"></i> افزودن  راننده
+                  <i class="pi pi-plus mr-2"></i> افزودن راننده
                 </button>
                 <DataTable
                   :value="items"
@@ -210,16 +209,122 @@
 
                   <!-- Add more columns as needed -->
                   <template #footer>
-                    <div
-                      style="background-color: #f3f6f3"
-                      class="flex justify-start items-center p-2"
-                    >
-                      <span class="text-right text-lg font-bold"
-                        >جمع کل تناژ</span
-                      >
-                      <span class="text-right text-lg font-semibold mr-8"
-                        >8756</span
-                      >
+                    <div style="" class="items-center p-2">
+                      <div class="flex" v-if="createdriver">
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 160px"
+                        >
+                          <Dropdown
+                            id="destination"
+                            :options="dropdownOptions"
+                            placeholder="انتخاب راننده"
+                            class=""
+                            optionLabel="label"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 140px"
+                        >
+                          <InputText
+                            id="source"
+                            placeholder="شماره انتظامی"
+                            class=""
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 120px"
+                        >
+                          <InputText
+                            id="source"
+                            placeholder="سریال "
+                            class=""
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 120px"
+                        >
+                          <InputText
+                            id="source"
+                            placeholder="ترانزیت"
+                            class=""
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 70px"
+                        >
+                          <InputText id="source" placeholder="تناژ" class="" />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 120px"
+                        >
+                          <InputText
+                            id="source"
+                            placeholder="نوع حمل"
+                            class=""
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 80px"
+                        >
+                          <InputText
+                            id="source"
+                            placeholder="پیمانکار"
+                            class=""
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 120px"
+                        >
+                          <InputText id="source" placeholder="تلفن" class="" />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 160px"
+                        >
+                          <InputText
+                            id="source"
+                            placeholder="نام صاحب حساب"
+                            class=""
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 160px"
+                        >
+                          <InputText id="source" placeholder="شماره حساب" class="" />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 60px"
+                        >
+                          <button class="text-red-600 flex justify-end">
+                            <img
+                              src="/public/plus.svg"
+                              alt="Sender Avatar"
+                              class="w-8 h-8 rounded-full ml-2"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flex justify-start mt-4" style="width: 100%">
+                        <div>
+                          <span class="text-right text-lg font-bold"
+                            >جمع کل تناژ</span
+                          >
+                        </div>
+
+                        <span class="text-right text-lg font-semibold mr-8"
+                          >8756</span
+                        >
+                      </div>
                     </div>
                   </template>
                 </DataTable>
@@ -317,6 +422,7 @@
 export default {
   data() {
     return {
+      createdriver: false,
       items: [
         {
           id: 1,

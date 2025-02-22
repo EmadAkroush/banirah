@@ -298,6 +298,7 @@
     color: #888888;
     text-align: center;
   }
+  
 
   .sec1 {
     display: flex;
@@ -360,6 +361,7 @@
     background-color: #E5F8F9;
     border-radius: 50%;
   }
+  
   .cr:hover {
     background-image: linear-gradient(
       48.55deg,
