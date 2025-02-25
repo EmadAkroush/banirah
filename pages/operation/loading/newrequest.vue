@@ -102,7 +102,28 @@
 
                   <div class="flex flex-col text-right">
                     <label for="amount" class="mb-1"
-                      >مبلغ پرداختی به راننده
+                      >  نرخ تناژ
+                      <span class="text-red-500">*</span></label
+                    >
+                    <InputText id="amount" placeholder="ریال" class="w-full" />
+                  </div>
+
+                  <div class="flex flex-col text-right">
+                    <label for="load-type" class="mb-1"
+                      > صاحب کالا <span class="text-red-500">*</span></label
+                    >
+                    <Dropdown
+                      id="load-type"
+                      :options="dropdownOptions1"
+                      optionLabel="label"
+                      placeholder="یک مورد را انتخاب کنید"
+                      class="w-full"
+                    />
+                  </div>
+
+                  <div class="flex flex-col text-right">
+                    <label for="amount" class="mb-1"
+                      >  نرخ دریافتی از صاحب کالا 
                       <span class="text-red-500">*</span></label
                     >
                     <InputText id="amount" placeholder="ریال" class="w-full" />
@@ -192,6 +213,12 @@
                   <Column
                     field="count"
                     header="شماره حساب"
+                    :sortable="true"
+                    bodyClass="text-right"
+                  ></Column>
+                  <Column
+                    field="paymentprice"
+                    header=" مبلغ پرداختی به راننده"
                     :sortable="true"
                     bodyClass="text-right"
                   ></Column>
@@ -435,6 +462,7 @@ export default {
           peyman: "نام پیمانکار",
           name: "نام ونام خانوادگی",
           count: 454545,
+          paymentprice : "1500000"
         },
         {
           id: 1,
@@ -447,6 +475,7 @@ export default {
           peyman: "نام پیمانکار",
           name: "نام ونام خانوادگی",
           count: 454545,
+           paymentprice : "1500000"
         },
         {
           id: 1,
@@ -459,12 +488,18 @@ export default {
           peyman: "نام پیمانکار",
           name: "نام ونام خانوادگی",
           count: 454545,
+           paymentprice : "1500000"
         },
         // Add more items as needed
       ],
       dropdownOptions: [
         { label: "Option 1", value: 1 },
         { label: "Option 2", value: 2 },
+        // Add more options as needed
+      ],
+      dropdownOptions1: [
+        { label: "ربانی", value: 1 },
+        { label: "حیدری", value: 2 },
         // Add more options as needed
       ],
     };

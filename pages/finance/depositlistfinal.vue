@@ -5,7 +5,7 @@
         <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
 
         <div class="mr-2 text-right">
-          <p class="text-right">تعریف لیست واریزی </p>
+          <p class="text-right">  لیست واریزی راننده </p>
         </div>
       </div>
       <div

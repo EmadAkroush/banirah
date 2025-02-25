@@ -76,66 +76,44 @@
                   </Column>
 
                   <Column
-                    field="driverName"
-                    header="نام راننده"
+                    field="namevahed"
+                    header="نام واحد"
                     :sortable="true"
                     bodyClass="text-right"
                   ></Column>
                   <Column
-                    field="registrationNumber"
-                    header="شماره انتظامی"
+                    field="namekala"
+                    header=" نام کالا"
                     :sortable="true"
                     bodyClass="text-right"
                   ></Column>
                   <Column
-                    field="serial"
-                    header="سریال"
+                    field="tedad"
+                    header="تعداد"
                     :sortable="true"
                     bodyClass="text-right"
                   ></Column>
                   <Column
-                    field="teransit"
-                    header="ترانزیت"
+                    field="mablagh"
+                    header="مبلغ"
                     :sortable="true"
                     bodyClass="text-right"
                   ></Column>
 
                   <Column
-                    field="tonnage"
-                    header="تناژ"
+                    field="olaviat"
+                    header="اولویت"
                     :sortable="true"
                     bodyClass="text-right"
                   ></Column>
                   <Column
-                    field="loadType"
-                    header="نوع حمل"
+                    field="taminkonnadeh"
+                    header="تامین کننده "
                     :sortable="true"
                     bodyClass="text-right"
                   ></Column>
-                  <Column
-                    field="peyman"
-                    header="پیمانکار"
-                    :sortable="true"
-                    bodyClass="text-right"
-                  ></Column>
-                  <Column
-                    field="peyman"
-                    header="تلفن"
-                    :sortable="true"
-                    bodyClass="text-right"
-                  ></Column>
-                  <Column
-                    field="name"
-                    header="نام صاحب حساب"
-                    :sortable="true"
-                    bodyClass="text-right"
-                  ></Column>
-                  <Column
-                    field="count"
-                    header="شماره حساب"
-                    :sortable="true"
-                    bodyClass="text-right"
-                  ></Column>
+      
+   
                   <Column field="actions" :header="null" bodyClass="text-right">
                     <template #body>
                       <button class="text-red-600">
@@ -260,40 +238,38 @@ export default {
       items: [
         {
           id: 1,
-          driverName: "بیژن بخشای زاده",
-          registrationNumber: "5555555",
-          serial: 1234,
-          tonnage: 878,
-          loadType: "حمل مستقیم",
-          teransit: "نوع ترانزیت",
-          peyman: "نام پیمانکار",
-          name: "نام ونام خانوادگی",
-          count: 454545,
+          namevahed: " واحد مالی ",
+          namekala: "ماوس",
+          tedad: 2,
+          mablagh: 0,
+          olaviat: "اولویت ",
+          taminkonnadeh: " فروشگاه پردیس ",
+   
         },
+
         {
           id: 1,
-          driverName: "بیژن بخشای زاده",
-          registrationNumber: "5555555",
-          serial: 1234,
-          tonnage: 878,
-          loadType: "حمل مستقیم",
-          teransit: "نوع ترانزیت",
-          peyman: "نام پیمانکار",
-          name: "نام ونام خانوادگی",
-          count: 454545,
+          namevahed: " واحد مالی ",
+          namekala: "ماوس",
+          tedad: 2,
+          mablagh: 0,
+          olaviat: "اولویت ",
+          taminkonnadeh: " فروشگاه پردیس ",
+   
         },
+
         {
           id: 1,
-          driverName: "بیژن بخشای زاده",
-          registrationNumber: "5555555",
-          serial: 1234,
-          tonnage: 878,
-          loadType: "حمل مستقیم",
-          teransit: "نوع ترانزیت",
-          peyman: "نام پیمانکار",
-          name: "نام ونام خانوادگی",
-          count: 454545,
+          namevahed: " واحد مالی ",
+          namekala: "ماوس",
+          tedad: 2,
+          mablagh: 0,
+          olaviat: "اولویت ",
+          taminkonnadeh: " فروشگاه پردیس ",
+   
         },
+ 
+  
         // Add more items as needed
       ],
       dropdownOptions: [

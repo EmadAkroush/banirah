@@ -89,21 +89,6 @@
                     />
                   </div>
 
-                  <!-- Mission Finder -->
-                  <div>
-                    <label
-                      class="block text-sm font-medium text-gray-700 mb-1"
-                      for="mission-finder"
-                      >فیدا ماموریت</label
-                    >
-                    <input
-                      type="text"
-                      id="mission-finder"
-                      placeholder="نام شهر وارد کنید"
-                      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-100"
-                    />
-                  </div>
-
                   <!-- Date Picker -->
                   <div>
                     <label
@@ -111,7 +96,7 @@
                       for="select-date"
                       >انتخاب تاریخ</label
                     >
-                    <PersianDatePicker v-model="selectedDate"    />
+                    <PersianDatePicker v-model="selectedDate" range />
                   </div>
 
                   <!-- Description -->
@@ -129,22 +114,23 @@
                     ></textarea>
                   </div>
                   <div class="col-span-full flex justify-end mt-4">
+                    <Button
+                      label="انصراف"
+                      class="p-button-outlined"
+                      style="
+                        width: 150px;
+                        color: #246020;
+                        border: 1px solid #246020;
+                      "
+                    />
+
                     <nuxt-link to="/general/mission/status">
                       <Button
-                        label="درخواست جدید"
-                        class="p-button-outlined"
-                        style="
-                          width: 150px;
-                          color: #246020;
-                          border: 1px solid #246020;
-                        "
+                        label="ثبت"
+                        class="mr-2 bg-green-600 text-white"
+                        style="width: 150px; background-color: #246020"
                       />
                     </nuxt-link>
-                    <Button
-                      label="صفحه اصلی"
-                      class="mr-2 bg-green-600 text-white"
-                      style="width: 150px; background-color: #246020"
-                    />
                   </div>
                 </form>
               </div>

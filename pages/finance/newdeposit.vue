@@ -39,6 +39,28 @@
             "
           >
             <div class="justify-between items-center ">
+
+              <h1 class="text-lg font-semibold pt-6"> اطلاعات بار </h1>
+              <div class="p-6 mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="flex flex-col text-right">
+                      نام صاحب کالا : سعیدی
+                  </div>
+                  <div class="flex flex-col text-right">
+                        نوع کالا : چوب
+                  </div>
+                  <div class="flex flex-col text-right">
+                    تناژ : 100
+                  </div>
+                  <div class="flex flex-col text-right">
+                    مبداء : مشهد
+                  </div>
+                  <div class="flex flex-col text-right">
+                    مقصد  : آنکارا
+                  </div>
+
+                </div>
+              </div>
              
               <div class="p-6 mx-auto">
                 <button
@@ -51,6 +73,7 @@
                 >
                   <i class="pi pi-plus mr-2"></i> ردیف جدید
                 </button>
+
                 <DataTable
                   :value="items"
                   class="p-datatable-sm"

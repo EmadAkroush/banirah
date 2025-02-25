@@ -61,12 +61,14 @@
               <!-- Draft Field -->
               <div class="mb-6">
                 <label class="block text-gray-700 mb-2" for="draft"
-                  >پیش‌نویس</label
+                  >رونوشت</label
                 >
-                <InputText
-                  type="text"
-                  v-model="value"
-                  class="w-full border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-100"
+                <Dropdown
+                  id="refer-to"
+                  :options="options1"
+                  v-model="selectedOption1"
+                  optionLabel="name"
+                  class="w-full"
                 />
               </div>
 
@@ -226,10 +228,16 @@ export default {
       src: null,
       letterText: "", // for v-model with Editor
       selectedOption: null,
+      selectedOption1: null,
       options: [
         { name: "گزینه ۱", code: "1" },
         { name: "گزینه ۲", code: "2" },
         { name: "گزینه ۳", code: "3" },
+      ],
+      options1: [
+        { name: "مالی", code: "1" },
+        { name: "کریر", code: "2" },
+        { name: "اداری", code: "3" },
       ],
     };
   },

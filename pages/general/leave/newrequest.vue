@@ -109,7 +109,7 @@
                     >
                       تاریخ مرخصی
                     </label>
-                    <PersianDatePicker v-model="selectedDate"    />
+                    <PersianDatePicker v-model="selectedDate" range    />
                   </div>
 
                   <!-- ساعت شروع -->

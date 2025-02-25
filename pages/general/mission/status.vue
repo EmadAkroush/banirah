@@ -5,7 +5,7 @@
           <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
   
           <div class="mr-2 text-right">
-            <p class="text-right">درخواست بارگیری</p>
+            <p class="text-right">درخواست ماموریت</p>
           </div>
         </div>
         <div
@@ -45,7 +45,7 @@
               "
             >
             <div class="flex justify-between ">
-                <h1 class="text-lg font-semibold mt-2 mb-2"> فرم ماموریت درون شهری </h1> 
+           <div></div>
                 <div
                     class="flex justify-center items-center mb-2"
                     style="
@@ -76,14 +76,14 @@
             </div>
        
             <div class="flex justify-end mt-4">
-              <nuxt-link to="/operation/newrequest">
+              <nuxt-link to="/general/mission/newrequest">
                 <Button
                   label="درخواست جدید"
                   class="p-button-outlined"
                   style="width: 150px; color: #246020; border: 1px solid #246020"
                 />
               </nuxt-link>
-              <nuxt-link to="/administrative/purchase">
+              <nuxt-link to="/general">
                 <Button
                   label="صفحه اصلی"
                   class="mr-2 bg-green-600 text-white"
