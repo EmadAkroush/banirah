@@ -123,7 +123,7 @@
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-12 gap-4 mt-4">
+      <!-- <div class="grid grid-cols-12 gap-4 mt-4">
         <div class="col-span-4">
           <div
             class="card"
@@ -149,8 +149,8 @@
             </div>
           </div>
         </div>
-        <div class="col-span-8">
-          <!-- <div
+        <div class="col-span-4">
+          <div
             class="card"
             style="
               background-color: #ffffff;
@@ -232,9 +232,9 @@
                 </TabPanel>
               </TabView>
             </div>
-          </div> -->
+          </div>
         </div>
-      </div>
+      </div> -->
       <div class="flex flex-row">
         <!-- <Card class="card-bar mt-4">
           <template #title> <h2>درخواست های تحویل بار</h2> </template>

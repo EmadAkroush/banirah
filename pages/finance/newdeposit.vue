@@ -5,7 +5,7 @@
         <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
 
         <div class="mr-2 text-right">
-          <p class="text-right"> تعریف لیست واریزی</p>
+          <p class="text-right">تعریف لیست واریزی</p>
         </div>
       </div>
       <div
@@ -25,7 +25,6 @@
           <div class="flex justify-between items-center mb-4">
             <div class="flex items-center">
               <!-- <img class="w-10 h-10 rounded-full ml-4" src="path/to/avatar.png" alt="User Avatar"> -->
-    
             </div>
           </div>
 
@@ -38,30 +37,23 @@
               border-radius: 12px;
             "
           >
-            <div class="justify-between items-center ">
-
-              <h1 class="text-lg font-semibold pt-6"> اطلاعات بار </h1>
+            <div class="justify-between items-center">
+              <h1 class="text-lg font-semibold pt-6">اطلاعات بار</h1>
               <div class="p-6 mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div class="flex flex-col text-right">
-                      نام صاحب کالا : سعیدی
+                    نام صاحب کالا : سعیدی
                   </div>
+                  <div class="flex flex-col text-right">نوع کالا : چوب</div>
                   <div class="flex flex-col text-right">
-                        نوع کالا : چوب
+                    نرخ تناژ : 1500000 ریال
                   </div>
-                  <div class="flex flex-col text-right">
-                    تناژ : 100
-                  </div>
-                  <div class="flex flex-col text-right">
-                    مبداء : مشهد
-                  </div>
-                  <div class="flex flex-col text-right">
-                    مقصد  : آنکارا
-                  </div>
-
+                  <div class="flex flex-col text-right">تناژ : 100</div>
+                  <div class="flex flex-col text-right">مبداء : مشهد</div>
+                  <div class="flex flex-col text-right">مقصد : آنکارا</div>
                 </div>
               </div>
-             
+
               <div class="p-6 mx-auto">
                 <button
                   style="
@@ -103,7 +95,7 @@
                     :sortable="true"
                     bodyClass="text-right"
                   ></Column>
-                  <Column 
+                  <Column
                     field="shomarekart"
                     header="شماره حساب / کارت"
                     :sortable="true"
@@ -121,7 +113,7 @@
                     :sortable="true"
                     bodyClass="text-right"
                   ></Column>
-            
+
                   <Column field="actions" :header="null" bodyClass="text-right">
                     <template #body>
                       <button class="text-red-600">
@@ -135,10 +127,10 @@
                   </Column>
 
                   <!-- Add more columns as needed -->
-                  <template #footer >
+                  <template #footer>
                     <div
-                    style="background-color: #F3F6F3;"
-                      class="flex justify-start items-center  p-2"
+                      style="background-color: #f3f6f3"
+                      class="flex justify-start items-center p-2"
                     >
                       <span class="text-right text-lg font-bold"
                         >جمع مبلغ کل</span
@@ -148,7 +140,25 @@
                       >
                     </div>
                   </template>
+
+               
                 </DataTable>
+                <h1 class="pt-8 pb-4">
+                  بارگذاری رسید پرداختی 
+                </h1>
+
+                <FileUpload
+                    name="demo[]"
+                    url="/api/upload"
+                    @upload="onAdvancedUpload($event)"
+                    :multiple="true"
+                    accept="image/*"
+                    :maxFileSize="1000000"
+                  >
+                    <template #empty>
+                      <span> فایل های خود را بکشید و رها کنید </span>
+                    </template>
+                  </FileUpload>
 
                 <div class="flex justify-end mt-4">
                   <Button
@@ -161,12 +171,12 @@
                     "
                   />
                   <nuxt-link to="/finance/depositlistfinal">
-                  <Button
-                    label="ثبت"
-                    class="mr-2 bg-green-600 text-white"
-                    style="width: 150px; background-color: #246020"
-                  />
-                </nuxt-link>
+                    <Button
+                      label="ثبت"
+                      class="mr-2 bg-green-600 text-white"
+                      style="width: 150px; background-color: #246020"
+                    />
+                  </nuxt-link>
                 </div>
               </div>
             </div>
@@ -247,7 +257,7 @@ export default {
         {
           id: 1,
           pelak: "۵۲ ب ۷۶۵ ایران ۲۲",
-          serial : 5555555555,
+          serial: 5555555555,
           namesaheb: "ابوالفضل توسلیان شیرازی",
           shomarekart: 123445613275,
           mablagh: "0 ریال",
@@ -256,7 +266,7 @@ export default {
         {
           id: 1,
           pelak: "۵۲ ب ۷۶۵ ایران ۲۲",
-          serial : 5555555555,
+          serial: 5555555555,
           namesaheb: "ابوالفضل توسلیان شیرازی",
           shomarekart: 123445613275,
           mablagh: "0 ریال",
@@ -265,7 +275,7 @@ export default {
         {
           id: 1,
           pelak: "۵۲ ب ۷۶۵ ایران ۲۲",
-          serial : 5555555555,
+          serial: 5555555555,
           namesaheb: "ابوالفضل توسلیان شیرازی",
           shomarekart: 123445613275,
           mablagh: "0 ریال",
@@ -274,7 +284,7 @@ export default {
         {
           id: 1,
           pelak: "۵۲ ب ۷۶۵ ایران ۲۲",
-          serial : 5555555555,
+          serial: 5555555555,
           namesaheb: "ابوالفضل توسلیان شیرازی",
           shomarekart: 123445613275,
           mablagh: "0 ریال",
@@ -283,7 +293,7 @@ export default {
         {
           id: 1,
           pelak: "۵۲ ب ۷۶۵ ایران ۲۲",
-          serial : 5555555555,
+          serial: 5555555555,
           namesaheb: "ابوالفضل توسلیان شیرازی",
           shomarekart: 123445613275,
           mablagh: "0 ریال",
@@ -292,13 +302,13 @@ export default {
         {
           id: 1,
           pelak: "۵۲ ب ۷۶۵ ایران ۲۲",
-          serial : 5555555555,
+          serial: 5555555555,
           namesaheb: "ابوالفضل توسلیان شیرازی",
           shomarekart: 123445613275,
           mablagh: "0 ریال",
           sharh: "حقوق آبان",
         },
-   
+
         // Add more items as needed
       ],
       dropdownOptions: [

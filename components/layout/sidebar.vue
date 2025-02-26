@@ -509,7 +509,7 @@ export default {
         },
         {
           label: "خروج",
-          to: "/",
+          to: "/login",
           id: 9
         },
         // You can add more items as needed
