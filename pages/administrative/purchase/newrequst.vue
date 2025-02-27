@@ -60,6 +60,7 @@
                     border: 1px solid #246020;
                   "
                   class="mb-4 px-4 py-2 text-white rounded flex items-center"
+                  @click="createdriver = !createdriver"
                 >
                   <i class="pi pi-plus mr-2"></i> ردیف جدید
                 </button>
@@ -70,6 +71,7 @@
                   :value="items"
                   class="p-datatable-sm"
                   responsiveLayout="scroll"
+
                 >
                   <Column field="actions" header="ردیف" bodyClass="text-right">
                     <template #body> 1 </template>
@@ -128,9 +130,84 @@
 
                   <!-- Add more columns as needed -->
                   <template #footer>
-                    <div
+                    <div style="" class="items-center p-2">
+                      <div class="flex" v-if="createdriver">
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 280px"
+                        >
+                          <Dropdown
+                            id="destination"
+                            :options="dropdownOptions"
+                            placeholder="انتخاب واحد"
+                            class=""
+                            optionLabel="label"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 140px"
+                        >
+                          <InputText
+                            id="source"
+                            placeholder="نام کالا"
+                            class=""
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 120px"
+                        >
+                          <InputText
+                            id="source"
+                            placeholder="تعداد "
+                            class=""
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 200px"
+                        >
+                          <InputText
+                            id="source"
+                            placeholder="مبلغ"
+                            class=""
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 200px"
+                        >
+                          <InputText id="source" placeholder="اولویت" class="" />
+                        </div>
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 200px"
+                        >
+                          <InputText
+                            id="source"
+                            placeholder="تامین کننده"
+                            class=""
+                          />
+                        </div>
+                    
+                
+                        <div
+                          class="flex flex-col text-right ml-1"
+                          style="width: 120px"
+                        >
+                          <button class="text-red-600 flex justify-end">
+                            <img
+                              src="/public/plus.svg"
+                              alt="Sender Avatar"
+                              class="w-8 h-8 rounded-full ml-2"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                      <div
                       style="background-color: #f3f6f3"
-                      class="flex justify-start items-center p-2"
+                      class="flex justify-start items-center p-2 mt-3"
                     >
                       <span class="text-right text-lg font-bold"
                         > مبلق کل </span
@@ -138,6 +215,7 @@
                       <span class="text-right text-lg font-semibold mr-8"
                         >50،000،000 ریال</span
                       >
+                    </div>
                     </div>
                   </template>
                 </DataTable>
@@ -244,9 +322,9 @@ export default {
           mablagh: 0,
           olaviat: "اولویت ",
           taminkonnadeh: " فروشگاه پردیس ",
+
    
         },
-
         {
           id: 1,
           namevahed: " واحد مالی ",
@@ -272,6 +350,7 @@ export default {
   
         // Add more items as needed
       ],
+      createdriver: false,
       dropdownOptions: [
         { label: "Option 1", value: 1 },
         { label: "Option 2", value: 2 },
