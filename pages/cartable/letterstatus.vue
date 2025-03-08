@@ -124,7 +124,7 @@
           
             </div>
             <div class="flex justify-end mt-4">
-              <nuxt-link to="/operation/newrequest">
+              <nuxt-link to="/cartable/newrequst">
                 <Button
                   label="درخواست جدید"
                   class="p-button-outlined"

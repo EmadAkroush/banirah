@@ -177,7 +177,7 @@ export default {
 
         },
         {
-          index: 1,
+          index: 2,
           tarikh: "۲ اردیبهشت ۱۴۰۲",
           mabdae: "مشهد",
           maghsad: "ارمنستان",
@@ -190,7 +190,7 @@ export default {
 
         },
         {
-          index: 1,
+          index: 3,
           tarikh: "۲ اردیبهشت ۱۴۰۲",
           mabdae: "مشهد",
           maghsad: "ارمنستان",
@@ -203,7 +203,7 @@ export default {
 
         },
         {
-          index: 1,
+          index: 4,
           tarikh: "۲ اردیبهشت ۱۴۰۲",
           mabdae: "مشهد",
           maghsad: "ارمنستان",
@@ -216,7 +216,7 @@ export default {
 
         },
         {
-          index: 1,
+          index: 5,
           tarikh: "۲ اردیبهشت ۱۴۰۲",
           mabdae: "مشهد",
           maghsad: "ارمنستان",
@@ -229,7 +229,7 @@ export default {
 
         },
         {
-          index: 1,
+          index: 6,
           tarikh: "۲ اردیبهشت ۱۴۰۲",
           mabdae: "مشهد",
           maghsad: "ارمنستان",
@@ -242,7 +242,7 @@ export default {
 
         },
         {
-          index: 1,
+          index: 7,
           tarikh: "۲ اردیبهشت ۱۴۰۲",
           mabdae: "مشهد",
           maghsad: "ارمنستان",

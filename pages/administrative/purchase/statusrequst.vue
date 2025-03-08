@@ -45,7 +45,7 @@
               "
             >
             <div class="flex justify-between ">
-                <h1 class="text-lg font-semibold mt-2 mb-2">فرم درخواست خرید</h1> 
+                <h1 class="text-lg font-semibold mt-2 mb-2"> لیست درخواست های خرید </h1> 
                 <div
                     class="flex justify-center items-center mb-2"
                     style="
@@ -81,7 +81,7 @@
             </div>
        
             <div class="flex justify-end mt-4">
-              <nuxt-link to="/operation/newrequest">
+              <nuxt-link to="/administrative/purchase/newrequst">
                 <Button
                   label="درخواست جدید"
                   class="p-button-outlined"

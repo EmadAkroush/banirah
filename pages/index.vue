@@ -123,7 +123,7 @@
           </div>
         </div>
       </div>
-      <!-- <div class="grid grid-cols-12 gap-4 mt-4">
+      <div class="grid grid-cols-12 gap-4 mt-4">
         <div class="col-span-4">
           <div
             class="card"
@@ -149,7 +149,7 @@
             </div>
           </div>
         </div>
-        <div class="col-span-4">
+        <div class="col-span-8">
           <div
             class="card"
             style="
@@ -234,9 +234,9 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="flex flex-row">
-        <!-- <Card class="card-bar mt-4">
+        <Card class="card-bar mt-4">
           <template #title> <h2>درخواست های تحویل بار</h2> </template>
           <template #content>
             <div class="flex flex-row gap-3 mt-2">
@@ -338,7 +338,7 @@
               </Card>
             </div>
           </template>
-        </Card> -->
+        </Card>
       </div>
       <div class="grid grid-cols-12 gap-4 mt-4">
         <div class="col-span-4">
@@ -469,7 +469,8 @@
           </div>
         </div>
         <div class="col-span-4">
-          <!-- <div
+          
+          <div
             class="card"
             style="
               background-color: #ffffff;
@@ -477,6 +478,17 @@
               box-shadow: 0px 0px 12px 0px #0000000f;
             "
           >
+          <div class=" bg-white rounded-lg p-4">
+              <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
+                عنوان پیش فرض
+              </h3>
+              <Chart
+                type="pie"
+                :data="pieChartData"
+                :options="chartOptions3"
+                style="height: 192px"
+              />
+            </div>
             <div class="flex items-center">
               <div
                 class="ml-3 flex justify-center items-center"
@@ -491,7 +503,7 @@
                 <img src="/public/dashboard/6.png" alt="" />
               </div>
               <p class="" style="font-size: 18px; font-weight: 700">
-                درخواست پیش فرض
+                  پرداختی های بارگیری 
               </p>
             </div>
             <DataTable :value="products" class="mt-6">
@@ -500,11 +512,11 @@
               <Column field="category" header="تاریخ درخواست	"></Column>
               <Column field="price" header="وضعیت"></Column>
             </DataTable>
-          </div> -->
+          </div>
         </div>
       </div>
       <div class="mt-4">
-        <!-- <div
+        <div
           class="card"
           style="
             background-color: #ffffff;
@@ -591,7 +603,7 @@
               </tbody>
             </table>
           </div>
-        </div> -->
+        </div>
       </div>
       <div class="mt-4">
         <div
@@ -603,7 +615,6 @@
           "
         >
           <div class="flex space-x-4">
-            <!-- نمودار ستونی -->
             <div class="w-full bg-white rounded-lg shadow-md p-4">
               <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
                 عنوان پیش فرض
@@ -616,7 +627,7 @@
               />
             </div>
 
-            <!-- نمودار میله‌ای -->
+          
           </div>
         </div>
       </div>
@@ -630,7 +641,7 @@
           "
         >
           <div class="flex space-x-4">
-            <!-- نمودار دایره‌ای (Pie) -->
+          
             <div class="w-1/3 bg-white rounded-lg p-4">
               <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
                 عنوان پیش فرض
@@ -643,7 +654,7 @@
               />
             </div>
 
-            <!-- نمودار دونات (Doughnut) -->
+           
             <div class="w-1/3 bg-white rounded-lg p-4">
               <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
                 عنوان پیش فرض
@@ -656,18 +667,7 @@
               />
             </div>
 
-            <!-- نمودار اشعه‌ای (Radar) -->
-            <!-- <div class="w-1/3 bg-white rounded-lg p-4">
-              <h3 class="text-lg text-gray-800 font-semibold text-right mb-4">
-                عنوان پیش فرض
-              </h3>
-              <Chart
-                type="radar"
-                :data="radarChartData"
-                :options="chartOptions3"
-                style="height: 300px"
-              />
-            </div> -->
+       
           </div>
         </div>
       </div>

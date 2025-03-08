@@ -5,7 +5,7 @@
           <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
   
           <div class="mr-2 text-right">
-            <p class="text-right">درخواست بارگیری</p>
+            <p class="text-right"> لیست اشخاص</p>
           </div>
         </div>
         <div
@@ -153,57 +153,57 @@
           noetafzil: "عنوان تفضیلی",
           noe: "عمومی",
           kodeshakhs: 1724546,
-          jensiat : "زن"
+          jensiat : "مرد"
           },
           {
-          index: 1,
+          index: 2,
           namefamily: " مهربان مهاجر جوان",
           kodemeli: 9288444,
           kodetafzil: 8888,
           noetafzil: "عنوان تفضیلی",
           noe: "عمومی",
           kodeshakhs: 1724546,
-          jensiat : "زن"
+          jensiat : "مرد"
           },
           {
-          index: 1,
+          index: 3,
           namefamily: " مهربان مهاجر جوان",
           kodemeli: 9288444,
           kodetafzil: 8888,
           noetafzil: "عنوان تفضیلی",
           noe: "عمومی",
           kodeshakhs: 1724546,
-          jensiat : "زن"
+          jensiat : "مرد"
           },
           {
-          index: 1,
+          index: 4,
           namefamily: " مهربان مهاجر جوان",
           kodemeli: 9288444,
           kodetafzil: 8888,
           noetafzil: "عنوان تفضیلی",
           noe: "عمومی",
           kodeshakhs: 1724546,
-          jensiat : "زن"
+          jensiat : "مرد"
           },
           {
-          index: 1,
+          index: 5,
           namefamily: " مهربان مهاجر جوان",
           kodemeli: 9288444,
           kodetafzil: 8888,
           noetafzil: "عنوان تفضیلی",
           noe: "عمومی",
           kodeshakhs: 1724546,
-          jensiat : "زن"
+          jensiat : "مرد"
           },
           {
-          index: 1,
+          index: 6,
           namefamily: " مهربان مهاجر جوان",
           kodemeli: 9288444,
           kodetafzil: 8888,
           noetafzil: "عنوان تفضیلی",
           noe: "عمومی",
           kodeshakhs: 1724546,
-          jensiat : "زن"
+          jensiat : "مرد"
           },
 
         

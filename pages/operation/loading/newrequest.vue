@@ -101,16 +101,15 @@
                   </div>
 
                   <div class="flex flex-col text-right">
-                    <label for="amount" class="mb-1"
-                      >  نرخ تناژ
-                      <span class="text-red-500">*</span></label
+                    <label for="amount" class="mb-1">
+                      نرخ تناژ <span class="text-red-500">*</span></label
                     >
                     <InputText id="amount" placeholder="ریال" class="w-full" />
                   </div>
 
                   <div class="flex flex-col text-right">
-                    <label for="load-type" class="mb-1"
-                      > صاحب کالا <span class="text-red-500">*</span></label
+                    <label for="load-type" class="mb-1">
+                      صاحب کالا <span class="text-red-500">*</span></label
                     >
                     <Dropdown
                       id="load-type"
@@ -122,8 +121,8 @@
                   </div>
 
                   <div class="flex flex-col text-right">
-                    <label for="amount" class="mb-1"
-                      >  نرخ دریافتی از صاحب کالا 
+                    <label for="amount" class="mb-1">
+                      نرخ دریافتی از صاحب کالا
                       <span class="text-red-500">*</span></label
                     >
                     <InputText id="amount" placeholder="ریال" class="w-full" />
@@ -198,12 +197,12 @@
                     :sortable="true"
                     bodyClass="text-right"
                   ></Column>
-                  <Column
+                  <!-- <Column
                     field="peyman"
                     header="تلفن"
                     :sortable="true"
                     bodyClass="text-right"
-                  ></Column>
+                  ></Column> -->
                   <Column
                     field="name"
                     header="نام صاحب حساب"
@@ -220,8 +219,15 @@
                     field="paymentprice"
                     header=" مبلغ پرداختی به راننده"
                     :sortable="true"
-                    bodyClass="text-right"
-                  ></Column>
+                    bodyClass=""
+                    style=""
+                  >
+                    <template #body="slotProps"> 
+                      <div class="flex items-center justify-center">
+                        {{ slotProps.data.paymentprice }}
+                      </div>
+                    </template>
+                  </Column>
                   <Column field="actions" :header="null" bodyClass="text-right">
                     <template #body>
                       <button class="text-red-600">
@@ -262,7 +268,7 @@
                         </div>
                         <div
                           class="flex flex-col text-right ml-1"
-                          style="width: 120px"
+                          style="width: 90px"
                         >
                           <InputText
                             id="source"
@@ -272,7 +278,7 @@
                         </div>
                         <div
                           class="flex flex-col text-right ml-1"
-                          style="width: 120px"
+                          style="width: 90px"
                         >
                           <InputText
                             id="source"
@@ -306,12 +312,12 @@
                             class=""
                           />
                         </div>
-                        <div
+                        <!-- <div
                           class="flex flex-col text-right ml-1"
                           style="width: 120px"
                         >
                           <InputText id="source" placeholder="تلفن" class="" />
-                        </div>
+                        </div> -->
                         <div
                           class="flex flex-col text-right ml-1"
                           style="width: 160px"
@@ -326,11 +332,15 @@
                           class="flex flex-col text-right ml-1"
                           style="width: 160px"
                         >
-                          <InputText id="source" placeholder="شماره حساب" class="" />
+                          <InputText
+                            id="source"
+                            placeholder="شماره حساب"
+                            class=""
+                          />
                         </div>
                         <div
-                          class="flex flex-col text-right ml-1"
-                          style="width: 60px"
+                          class="flex flex-col text-right ml"
+                          style="width: 240px"
                         >
                           <button class="text-red-600 flex justify-end">
                             <img
@@ -462,7 +472,7 @@ export default {
           peyman: "نام پیمانکار",
           name: "نام ونام خانوادگی",
           count: 454545,
-          paymentprice : "1500000"
+          paymentprice: "1500000",
         },
         {
           id: 1,
@@ -475,7 +485,7 @@ export default {
           peyman: "نام پیمانکار",
           name: "نام ونام خانوادگی",
           count: 454545,
-           paymentprice : "1500000"
+          paymentprice: "1500000",
         },
         {
           id: 1,
@@ -488,7 +498,7 @@ export default {
           peyman: "نام پیمانکار",
           name: "نام ونام خانوادگی",
           count: 454545,
-           paymentprice : "1500000"
+          paymentprice: "1500000",
         },
         // Add more items as needed
       ],

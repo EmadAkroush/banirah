@@ -366,7 +366,7 @@
               <i class="pi pi-upload text-2xl"></i>
             </div>
             <!-- Label -->
-            <p class="mt-3 text-gray-600 font-medium">؟؟؟</p>
+            <p class="mt-3 text-gray-600 font-medium">بدون نام </p>
           </div>
           <!-- External Letter Card -->
           <div
@@ -381,7 +381,7 @@
               <i class="pi pi-upload text-2xl"></i>
             </div>
             <!-- Label -->
-            <p class="mt-3 text-gray-600 font-medium">؟؟؟</p>
+            <p class="mt-3 text-gray-600 font-medium">بدون نام </p>
           </div>
         </div>
       </Dialog>
