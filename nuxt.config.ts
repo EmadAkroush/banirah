@@ -3,15 +3,17 @@ import Aura from "@primevue/themes/aura";
 
 
 export default defineNuxtConfig({
+ 
   devtools: { enabled: false },
   modules: [
     "@nuxtjs/tailwindcss",
     "@primevue/nuxt-module",
    
   ],
+ 
   runtimeConfig: {
     public: {
-        apiBase: 'http://85.198.21.72:81/api/1.0'
+        apiBase: 'https://silk.brt.co.ir'
     }
     
 },

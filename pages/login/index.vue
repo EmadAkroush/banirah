@@ -1,71 +1,123 @@
 <template>
   <div class="general p-6">
-    <div class="flex items-center justify-center h-screen ">
-    <div class="p-8 bg-white  rounded-lg w-full max-w-md">
-      <div class="flex justify-center mb-6">
-        <!-- Replace with your actual logo -->
-        <img src="../../public/logo-12.png" alt="Logo"  />
-      </div>
-      <form @submit.prevent="handleSubmit" class="space-y-4">
-        <div>
-          <label for="username" class="block text-sm font-medium text-gray-700">نام کاربری</label>
-          <div class="mt-1 relative rounded-md shadow-sm">
-            <InputText id="username" v-model="form.username" placeholder="نام کاربری" class="block w-full" />
-          </div>
+    <div class="flex items-center justify-center h-screen">
+      <div class="p-8 bg-white rounded-lg w-full max-w-md">
+        <div class="flex justify-center mb-6">
+          <!-- Replace with your actual logo -->
+          <img src="../../public/logo-12.png" alt="Logo" />
         </div>
-        <div>
-          <label for="password" class="block text-sm font-medium text-gray-700" >رمز عبور</label>
-          <div class="mt-1 relative rounded-md shadow-sm">
-            <InputText id="password" v-model="form.password" type="password" placeholder="رمز عبور" class="block w-full" />
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
+        <form @submit.prevent="handleSubmit" class="space-y-4">
+          <div>
+            <label
+              for="username"
+              class="block text-sm font-medium text-gray-700"
+              >نام کاربری</label
+            >
+            <div class="mt-1 relative rounded-md shadow-sm">
+              <InputText
+                id="username"
+                v-model="form.username"
+                placeholder="نام کاربری"
+                class="block w-full"
+              />
             </div>
           </div>
-        </div>
-        <div>
-          <Button label="ورود" type="submit" class="mt-2 w-full" style="background-color: #246020; border: none; " />
-        </div>
-      </form>
+          <div>
+            <label
+              for="password"
+              class="block text-sm font-medium text-gray-700"
+              >رمز عبور</label
+            >
+            <div class="mt-1 relative rounded-md shadow-sm">
+              <InputText
+                id="password"
+                v-model="form.password"
+                type="password"
+                placeholder="رمز عبور"
+                class="block w-full"
+              />
+              <div
+                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+              >
+                <svg
+                  class="h-5 w-5 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div>
+            <Button
+              label="ورود"
+              type="submit"
+              class="mt-2 w-full"
+              style="background-color: #246020; border: none"
+            />
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-  
-
-
   </div>
 </template>
 <script setup>
 definePageMeta({
   layout: false, // This will disable the layout
 });
-
 </script>
 <script>
 export default {
   data() {
     return {
       form: {
-        username: '',
-        password: '',
+        username: "",
+        password: "",
       },
+      data: null,
     };
   },
   methods: {
-    handleSubmit() {
-      // Handle login logic here
-      // console.log("Login Form Submitted", this.form);
-      this.$router.push('/');
+    async handleSubmit() {
+      try {
+       
+        this.data = await $fetch("/api/auth/login" ,{
+          method: "POST",
+        });
+        // داده‌ای که از API دریافت کردید
+      } catch (error) {
+        console.log(error);
+      } finally {
+       
+        console.log("api", this.data);
+      }
+      // this.$router.push('/');
+      // const data = await this.$axios.post(`${apiBase}/oauth/token`({
+      //       grant_type: 'client_credentials', // OAuth2 grant type
+      //       client_id: 6,
+      //       client_secret: "UAY60FJqmWqkEc2ElQIC7cxo8AJ7h8gJBR4kKLe5",
+      //   }), {
+      //       headers: {
+      //           'Content-Type': 'application/x-www-form-urlencoded',
+      //       }
+      //   });
     },
+  },
+  beforeMount() {
+    this.handleSubmit();
   },
 };
 </script>
 
-
-
 <style lang="scss">
 .general {
-
   min-height: 100vh;
 
   .sec1 {

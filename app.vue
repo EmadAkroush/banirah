@@ -47,7 +47,7 @@ export default {
    
   },
   beforeMount() {
-    this.getapi();
+    // this.getapi();
   },
 };
 </script>

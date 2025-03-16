@@ -1,17 +1,25 @@
+import axios from 'axios';
 export default defineEventHandler(async (event) => {
     const body = await readBody(event)
     const { public: { apiBase } } = useRuntimeConfig()
     
     try {
-        const data = await $fetch(`http://85.198.21.72:81/workflow/oauth2/token` , {
-            method: 'POST',
-            body: body,
-            headers: {
-                'Accept': 'application/json',
-            }
-        })
+       
+        const data = await axios.post(`${apiBase}/oauth/token`, 
+            new URLSearchParams({
+              grant_type: 'client_credentials',
+              client_id: 6,
+              client_secret: 'UAY60FJqmWqkEc2ElQIC7cxo8AJ7h8gJBR4kKLe5',
+            }), {
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+              },
+            });
+          // Log the full response to inspect it
+          console.log("dddd", data.data.access_token);
         
-        setCookie(event, 'token', data, {
+        
+        setCookie(event, 'tokennew', data.data.access_token, {
             httpOnly: true,
             secure: true,
             maxAge: 60 * 60 * 24 * 7, // 1 week
@@ -19,7 +27,7 @@ export default defineEventHandler(async (event) => {
         })
 
         
-        return data.data.user;
+        return data.data.access_token;
     } catch (error) {
         return error
     }
