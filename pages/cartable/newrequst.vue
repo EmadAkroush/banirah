@@ -63,7 +63,7 @@
                 <label class="block text-gray-700 mb-2" for="draft"
                   >رونوشت</label
                 >
-              
+
                 <Dropdown
                   id="refer-to"
                   :options="user"
@@ -135,6 +135,7 @@
                 label="ثبت"
                 class="mr-2 bg-green-600 text-white"
                 style="width: 150px; background-color: #246020"
+                @click="postproduct()"
               />
             </nuxt-link>
           </div>
@@ -228,6 +229,7 @@ export default {
       selectedOption: null,
       selectedOption1: null,
       user: null,
+      data: null,
       options: [
         { name: "گزینه ۱", code: "1" },
         { name: "گزینه ۲", code: "2" },
@@ -238,7 +240,6 @@ export default {
         { name: "کریر", code: "2" },
         { name: "اداری", code: "3" },
       ],
-
     };
   },
   methods: {
@@ -260,6 +261,25 @@ export default {
       } finally {
         this.user = toRaw(this.user.data);
         console.log("let", toRaw(this.user));
+      }
+    },
+    async postproduct() {
+      try {
+        this.data = await $fetch("/api/letters/post", {
+          method: "POST",
+          body: {
+            subject: "عنوان تستی",
+            content: "محتوای تستی",
+            senders: ["user_123"],
+            mainRecipient: "user_456",
+          },
+        });
+
+      } catch (error) {
+        console.log(error);
+      } finally {
+        this.data = toRaw(this.data);
+        console.log("hy", toRaw(this.data));
       }
     },
   },

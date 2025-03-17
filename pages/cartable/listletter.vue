@@ -331,6 +331,32 @@ export default {
         console.log("list", toRaw(this.list));
       }
     },
+    async getproduct2() {
+      try {
+        this.user = await $fetch("/api/letters");
+      } catch (error) {
+        console.log(error);
+      } finally {
+        this.user = toRaw(this.user.data);
+        console.log("let", toRaw(this.user));
+      }
+    },
+    // async getuser() {
+    //   try {
+    //     this.user = await $fetch("/api/getuser" , {
+    //         params: {
+    //         id: 4
+    //         }
+    //     });
+    //   } catch (error) {
+    //     console.log(error);
+    //   } finally {
+    //     this.user = toRaw(this.user.data);
+    //     console.log("getuser", toRaw(this.user));
+    //   }
+    // },
+    
+
 
 
 
@@ -341,6 +367,8 @@ export default {
   },
   beforeMount() {
     this.getproduct();
+    this.getproduct2();
+
   },
 
 };
