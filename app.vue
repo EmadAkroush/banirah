@@ -32,7 +32,7 @@ export default {
   methods: {
     async getapi() {
       try {
-        this.data = await $fetch("/api/token", {
+        this.data = await $fetch("/api", {
           method: "POST",
           body: { grant_type: "client_credentials", client_secret: "1372906256718bf3c3d0d16047067389" , client_id: "LABXQQKFVNSAOKMFAYIWZARFNUCAHHZV"  },
         });
@@ -47,7 +47,7 @@ export default {
    
   },
   beforeMount() {
-    // this.getapi();
+    this.getapi();
   },
 };
 </script>

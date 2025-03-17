@@ -7,7 +7,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
          const user = await $fetch ('/api/auth/me', {
             headers
          })
-
+  
          authUser.value = user;
     } catch (error) {
         authUser.value = null;
