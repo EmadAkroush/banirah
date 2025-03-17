@@ -121,13 +121,6 @@
               header="ارسال از طرف"
               sortable
             >
-              <Column
-                field="vazife"
-                style="text-align: right"
-                header="وظیفه"
-                sortable
-              ></Column>
-
               <template #body="slotProps">
                 <div class="flex items-center">
                   <img
@@ -135,7 +128,7 @@
                     alt="Sender Avatar"
                     class="w-8 h-8 rounded-full ml-2"
                   />
-                  {{ slotProps.data.from }}
+                  {{ slotProps.data.participants[0].fullname }}
                 </div>
               </template>
             </Column>
