@@ -105,12 +105,12 @@
           "
         >
           <DataTable
-            :value="tableData"
+            :value="list"
             class="p-datatable-gridlines"
             style="text-align: right"
           >
             <Column
-              field="index"
+              field="id"
               style="text-align: right"
               header="ردیف"
               sortable
@@ -140,29 +140,29 @@
               </template>
             </Column>
             <Column
-              field="onvan"
+              field="case_title"
               style="text-align: right"
               header="عنوان نامه "
               sortable
             >
-            <template #body="slotProps">
+            <!-- <template #body="slotProps">
                 <div class="flex items-center">
                  <nuxt-link to="/cartable/detailsletter">
                   {{ slotProps.data.from }}
                 </nuxt-link>
                 </div>
-              </template>
+              </template> -->
           
           
           </Column>
             <Column
-              field="olaviat"
+              field="status"
               style="text-align: right"
-              header="اولویت"
+              header="وضعیت"
               sortable
             ></Column>
             <Column
-              field="tarikh"
+              field="created_at"
               style="text-align: right"
               header="تاریخ"
               sortable
@@ -265,7 +265,7 @@ export default {
   data() {
     return {
       activeTab: "received", // تب پیش‌فرض
-    
+      list : null,
       tableData: [
         {
           index: 1,
@@ -321,9 +321,26 @@ export default {
     };
   },
   methods: {
+    async getproduct() {
+      try {
+        this.list = await $fetch("/api/letters/list");
+      } catch (error) {
+        console.log(error);
+      } finally {
+        this.list = toRaw(this.list.data);
+        console.log("list", toRaw(this.list));
+      }
+    },
+
+
+
     setActiveTab(tab) {
       this.activeTab = tab; // تنظیم تب فعال
     },
+
+  },
+  beforeMount() {
+    this.getproduct();
   },
 
 };

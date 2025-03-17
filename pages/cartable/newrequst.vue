@@ -51,9 +51,9 @@
                 >
                 <Dropdown
                   id="refer-to"
-                  :options="options"
+                  :options="user"
                   v-model="selectedOption"
-                  optionLabel="name"
+                  optionLabel="lastname"
                   class="w-full"
                 />
               </div>
@@ -63,11 +63,12 @@
                 <label class="block text-gray-700 mb-2" for="draft"
                   >رونوشت</label
                 >
+              
                 <Dropdown
                   id="refer-to"
-                  :options="options1"
+                  :options="user"
                   v-model="selectedOption1"
-                  optionLabel="name"
+                  optionLabel="lastname"
                   class="w-full"
                 />
               </div>
@@ -85,9 +86,6 @@
                   class="w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-indigo-100"
                 />
               </div>
-
-
-
 
               <div class="flex justify-between">
                 <div class="card flex flex-col items-center gap-6">
@@ -229,6 +227,7 @@ export default {
       letterText: "", // for v-model with Editor
       selectedOption: null,
       selectedOption1: null,
+      user: null,
       options: [
         { name: "گزینه ۱", code: "1" },
         { name: "گزینه ۲", code: "2" },
@@ -239,6 +238,7 @@ export default {
         { name: "کریر", code: "2" },
         { name: "اداری", code: "3" },
       ],
+
     };
   },
   methods: {
@@ -252,6 +252,19 @@ export default {
 
       reader.readAsDataURL(file);
     },
+    async getproduct() {
+      try {
+        this.user = await $fetch("/api/letters");
+      } catch (error) {
+        console.log(error);
+      } finally {
+        this.user = toRaw(this.user.data);
+        console.log("let", toRaw(this.user));
+      }
+    },
+  },
+  beforeMount() {
+    this.getproduct();
   },
   name: "LetterForm",
 };

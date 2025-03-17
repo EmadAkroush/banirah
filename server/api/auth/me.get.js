@@ -30,23 +30,22 @@ import axios from 'axios';
 export default defineEventHandler(async (event) => {
     const body = await readBody(event)
     const { public: { apiBase } } = useRuntimeConfig()
-    const tokennew = getCookie(event, 'tokennew');
+    const refresh = getCookie(event, 'refresh');
     try {
        
         const data = await axios.post(`${apiBase}/oauth/token`, 
             new URLSearchParams({
-              grant_type: 'client_credentials',
+              grant_type: 'refresh_token',
+              refresh_token: `${refresh}`,
               client_id: 6,
-              refresh_token: `${newtoken}`,
               client_secret: 'UAY60FJqmWqkEc2ElQIC7cxo8AJ7h8gJBR4kKLe5',
-
             }), {
               headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
               },
             });
           // Log the full response to inspect it
-          console.log("me ", tokennew);
+          console.log("refresh_token 9 ", refresh_token);
         
         
         // setCookie(event, 'tokennew', data.data.access_token, {

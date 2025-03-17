@@ -34,6 +34,13 @@ export default defineEventHandler(async (event) => {
       path: "/",
     });
 
+    setCookie(event, "refresh", data.data.refresh_token, {
+      httpOnly: true,
+      secure: true,
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+      path: "/",
+    });
+
     return data.data.access_token;
   } catch (error) {
     return error;

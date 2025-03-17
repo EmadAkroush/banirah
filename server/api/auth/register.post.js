@@ -8,6 +8,7 @@ export default defineEventHandler(async (event) => {
             body: body,
             headers: {
                 'Accept': 'application/json',
+                
             }
         })
       console.log("data" , data);
