@@ -4,6 +4,7 @@ export default defineEventHandler(async (event) => {
     public: { apiBase },
   } = useRuntimeConfig();
   const tokennew = getCookie(event, "tokennew");
+  const query = getQuery(event);
 
   try {
     // const data = await $fetch(`${apiBase}/api/1.0/requests?order_direction=asc&per_page=10`, {
@@ -13,7 +14,7 @@ export default defineEventHandler(async (event) => {
     //     }
     // });
     // console.log("datam" , data );
-    const data = await $fetch(`${apiBase}/api/1.0/requests`, {
+    const data = await $fetch(`${apiBase}/api/1.0/requests/${query.id}`, {
       method: 'GET',
       params: {
       page: 1,

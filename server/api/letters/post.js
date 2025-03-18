@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
                 'Authorization': `Bearer ${tokennew}`
             }
         });
-        console.log("datam" , data );
+    
 
         return data;
     } catch (error) {

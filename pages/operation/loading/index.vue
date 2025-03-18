@@ -5,7 +5,7 @@
         <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
 
         <div class="mr-2 text-right">
-          <p class="text-right">درخواست بارگیری</p>
+          <p class="text-right">آمار بارگیری</p>
         </div>
       </div>
       <div
@@ -45,7 +45,7 @@
               <button
                 class="border border-green-600 text-green-600 px-4 py-2 rounded"
               >
-                درخواست بارگیری
+                آمار بارگیری
               </button>
             </nuxt-link>
           </div>

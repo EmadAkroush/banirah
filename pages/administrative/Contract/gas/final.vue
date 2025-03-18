@@ -27,7 +27,7 @@
               <Stepper value="2">
                 <StepList>
                   <Step value="1"> درخواست کننده </Step>
-                  <Step value="2"> تایید کریر </Step>
+                  <Step value="2">  مدیر عملیات  </Step>
                   <Step value="3"> تایید مالی </Step>
                   <Step value="4"> تایید مدیر بازار </Step>
                   <Step value="5"> تایید مدیریت </Step>

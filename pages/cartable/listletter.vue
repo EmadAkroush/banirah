@@ -5,7 +5,7 @@
         <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
 
         <div class="mr-2 text-right">
-          <p class="text-right">تعریف نامه ها </p>
+          <p class="text-right">تعریف نامه ها</p>
         </div>
       </div>
       <div
@@ -44,7 +44,7 @@
                   }"
                   @click="setActiveTab('draft')"
                 >
-                پیش نویس ها
+                  پیش نویس ها
                 </button>
                 <!-- نامه های دریافتی -->
                 <button
@@ -71,7 +71,7 @@
                 </button>
               </div>
             </div>
-            <div class="relative"  style="margin-left: 8px;">
+            <div class="relative" style="margin-left: 8px">
               <img
                 src="/public/listbargiry/icons-Line-search.png"
                 alt=""
@@ -81,10 +81,9 @@
                 type="text"
                 placeholder="جستجوی نامه"
                 class="border rounded-lg px-8 py-2"
-               
               />
             </div>
-            <PersianDatePicker v-model="selectedDate" range   />
+            <PersianDatePicker v-model="selectedDate" range />
           </div>
           <nuxt-link to="/cartable/newrequst">
             <button
@@ -109,12 +108,15 @@
             class="p-datatable-gridlines"
             style="text-align: right"
           >
-            <Column
-              field="id"
-              style="text-align: right"
-              header="ردیف"
-              sortable
-            ></Column>
+            <Column field="id" style="text-align: right" header="ردیف" sortable>
+              <template #body="slotProps">
+                <div class="flex items-center">
+                  <nuxt-link :to="`/cartable/${slotProps.data.id}`">
+                    {{ slotProps.data.id }}
+                  </nuxt-link>
+                </div>
+              </template>
+            </Column>
             <Column
               field="from"
               style="text-align: right"
@@ -138,16 +140,14 @@
               header="عنوان نامه "
               sortable
             >
-            <!-- <template #body="slotProps">
+              <!-- <template #body="slotProps">
                 <div class="flex items-center">
                  <nuxt-link to="/cartable/detailsletter">
                   {{ slotProps.data.from }}
                 </nuxt-link>
                 </div>
               </template> -->
-          
-          
-          </Column>
+            </Column>
             <Column
               field="status"
               style="text-align: right"
@@ -169,7 +169,7 @@
             :rowsPerPageOptions="[10, 20, 30]"
           ></Paginator>
 
-          <span>صفحه شماره ۲</span>
+          <span>صفحه شماره 1</span>
         </div>
       </div>
     </div>
@@ -258,7 +258,7 @@ export default {
   data() {
     return {
       activeTab: "received", // تب پیش‌فرض
-      list : null,
+      list: null,
       tableData: [
         {
           index: 1,
@@ -348,21 +348,14 @@ export default {
     //     console.log("getuser", toRaw(this.user));
     //   }
     // },
-    
-
-
-
 
     setActiveTab(tab) {
       this.activeTab = tab; // تنظیم تب فعال
     },
-
   },
   beforeMount() {
     this.getproduct();
     this.getproduct2();
-
   },
-
 };
 </script>

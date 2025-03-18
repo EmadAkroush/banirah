@@ -5,7 +5,7 @@
         <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
 
         <div class="mr-2 text-right">
-          <p class="text-right"> نامه جدید </p>
+          <p class="text-right">تعریف لیست واریزی</p>
         </div>
       </div>
       <div
@@ -39,7 +39,7 @@
                 >
                 <InputText
                   type="text"
-                  v-model="value"
+                  v-model="subject"
                   class="w-full border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-100"
                 />
               </div>
@@ -79,12 +79,16 @@
                   >متن نامه</label
                 >
                 <!-- PrimeVue Editor with style adjustments -->
+                 {{ content }}
+                 <ClientOnly>
                 <Editor
                   id="letter-text"
-                  v-model="letterText"
+                  v-model="content"
                   editorStyle="height: 320px"
                   class="w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-indigo-100"
                 />
+                 </ClientOnly>
+
               </div>
 
               <div class="flex justify-between">
@@ -135,7 +139,7 @@
                 label="ثبت"
                 class="mr-2 bg-green-600 text-white"
                 style="width: 150px; background-color: #246020"
-                @click="postproduct()"
+                @click="getdetails()"
               />
             </nuxt-link>
           </div>
@@ -224,12 +228,16 @@ export default {
   components: {},
   data() {
     return {
+      pageId: this.$route.params.id,
       src: null,
       letterText: "", // for v-model with Editor
       selectedOption: null,
       selectedOption1: null,
       user: null,
       data: null,
+      details : null,
+      subject: null,
+      content: null,
       options: [
         { name: "گزینه ۱", code: "1" },
         { name: "گزینه ۲", code: "2" },
@@ -263,31 +271,47 @@ export default {
         console.log("let", toRaw(this.user));
       }
     },
-    async postproduct() {
+    async detailsfu() {
       try {
-        this.data = await $fetch("/api/letters/post", {
-          method: "POST",
-          body: {
-            subject: "عنوان تستی",
-            content: "محتوای تستی",
-            senders: ["user_123"],
-            mainRecipient: "user_456",
-          },
+        this.details = await $fetch("/api/letters/go" , {
+          query: { id: `${this.pageId}` },
         });
-
+      this.subject = this.details.data.subject;
+      this.content = this.details.data.content;
+      
       } catch (error) {
         console.log(error);
       } finally {
-        this.data = toRaw(this.data);
-        console.log("hy", toRaw(this.data));
+        this.details = toRaw(this.details.data);
+        console.log("getdetails", toRaw(this.details));
       }
     },
+    // async postproduct() {
+    //   try {
+    //     this.data = await $fetch("/api/letters/post", {
+    //       method: "POST",
+    //       body: {
+    //         subject: "عنوان تستی",
+    //         content: "محتوای تستی",
+    //         senders: ["user_123"],
+    //         mainRecipient: "user_456",
+    //       },
+    //     });
+    //   } catch (error) {
+    //     console.log(error);
+    //   } finally {
+    //     this.data = toRaw(this.data);
+    //     console.log("hy", toRaw(this.data));
+    //   }
+    // },
 
+   
   },
   beforeMount() {
     this.getproduct();
-
+    this.detailsfu();
   },
   name: "LetterForm",
 };
 </script>
+

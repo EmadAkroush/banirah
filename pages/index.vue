@@ -489,7 +489,7 @@
                 style="height: 192px"
               />
             </div>
-            <div class="flex items-center">
+            <!-- <div class="flex items-center">
               <div
                 class="ml-3 flex justify-center items-center"
                 style="
@@ -505,13 +505,13 @@
               <p class="" style="font-size: 18px; font-weight: 700">
                   پرداختی های بارگیری 
               </p>
-            </div>
-            <DataTable :value="products" class="mt-6">
+            </div> -->
+            <!-- <DataTable :value="products" class="mt-6">
               <Column field="code" header="ردیف"></Column>
               <Column field="name" header="نام راننده"></Column>
               <Column field="category" header="تاریخ درخواست	"></Column>
               <Column field="price" header="وضعیت"></Column>
-            </DataTable>
+            </DataTable> -->
           </div>
         </div>
       </div>
@@ -631,7 +631,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-4">
+      <!-- <div class="mt-4">
         <div
           class="card"
           style="
@@ -670,7 +670,7 @@
        
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="mt-4">
         <div
           class="card"

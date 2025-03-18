@@ -276,8 +276,12 @@ export default {
         gender: "مرد",
       },
       types: [
-        { label: "Type 1", value: "type1" },
-        { label: "Type 2", value: "type2" },
+        { label: "راننده", value: "type1" },
+        { label: "صاحب ماشین ", value: "type2" },
+        { label: "صاحب کالا ", value: "type3" },
+        { label: "نمایندگان", value: "type4" },
+
+
         // Add more options as needed
       ],
       uploadedFiles: [],
