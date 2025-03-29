@@ -38,7 +38,7 @@
             "
           >
             <div class="justify-between items-center py-4">
-              <h1 class="text-lg font-semibold"> آمار بارگیری</h1>
+              <h1 class="text-lg font-semibold">فرم آمار بارگیری</h1>
               <div class="p-6 mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div class="flex flex-col text-right">
@@ -80,7 +80,8 @@
                     <label for="product-type" class="mb-1">نوع فرآورده</label>
                     <Dropdown
                       id="product-type"
-                      :options="dropdownOptions"
+                      :options="Producttypedrop"
+                      v-model="Producttypemodel"
                       optionLabel="label"
                       placeholder="یک مورد را انتخاب کنید"
                       class="w-full"
@@ -93,7 +94,8 @@
                     >
                     <Dropdown
                       id="load-type"
-                      :options="dropdownOptions"
+                      :options="Typeoftransportdrop"
+                       v-model="Typeoftransportmodel"
                       optionLabel="label"
                       placeholder="یک مورد را انتخاب کنید"
                       class="w-full"
@@ -222,7 +224,7 @@
                     bodyClass=""
                     style=""
                   >
-                    <template #body="slotProps"> 
+                    <template #body="slotProps">
                       <div class="flex items-center justify-center">
                         {{ slotProps.data.paymentprice }}
                       </div>
@@ -460,6 +462,8 @@ export default {
   data() {
     return {
       createdriver: false,
+      Typeoftransportmodel: null,
+      Producttypemodel: null,
       items: [
         {
           id: 1,
@@ -502,14 +506,24 @@ export default {
         },
         // Add more items as needed
       ],
-      dropdownOptions: [
-        { label: "Option 1", value: 1 },
-        { label: "Option 2", value: 2 },
+
+      Producttypedrop: [
+        { label: "سوخت", value: 1 },
+        { label: "گاز", value: 2 },
         // Add more options as needed
       ],
       dropdownOptions1: [
         { label: "ربانی", value: 1 },
         { label: "حیدری", value: 2 },
+        // Add more options as needed
+      ],
+      Typeoftransportdrop: [
+        { label: "زمینی", value: 1 },
+        { label: "هوایی", value: 2 },
+        { label: "ریلی", value: 3 },
+        { label: "دریایی", value: 4 },
+        { label: "ترکیبی", value: 5 },
+
         // Add more options as needed
       ],
     };

@@ -352,8 +352,10 @@ export default {
       ],
       createdriver: false,
       dropdownOptions: [
-        { label: "Option 1", value: 1 },
-        { label: "Option 2", value: 2 },
+        { label: "واحد کسب کار", value: 1 },
+        { label: "واحد منابع انسانی", value: 2 },
+        { label: "واحد مالی", value: 2 },
+
         // Add more options as needed
       ],
     };

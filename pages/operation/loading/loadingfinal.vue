@@ -5,7 +5,7 @@
         <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
 
         <div class="mr-2 text-right">
-          <p class="text-right">درخواست بارگیری</p>
+          <p class="text-right">آمار بارگیری</p>
         </div>
       </div>
       <div
@@ -28,7 +28,7 @@
                 <StepList>
                   <Step value="1"> درخواست کننده </Step>
                   <Step value="2">  تایید مالی </Step>
-                  <Step value="3">  مدیر کریر </Step>
+                  <Step value="3">  مدیر عملیات </Step>
                   <Step value="4"> تایید مدیریت </Step>
      
                 </StepList>
