@@ -294,8 +294,9 @@ export default {
         // Add more options as needed
       ],
       serviceOptions: [
-        { name: "خدمت ۱", code: "1" },
-        { name: "خدمت ۲", code: "2" },
+        { name: " واحد کسب کار ", code: "1" },
+        { name: " واحد منابع انسانی", code: "2" },
+        { name: " واحد مالی", code: "3" },
         // Add more options as needed
       ],
     };

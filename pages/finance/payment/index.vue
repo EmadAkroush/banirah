@@ -61,14 +61,14 @@
               <span>صفحه شماره 1</span>
             </div>
             <div class="flex justify-end mt-4">
-              <nuxt-link to="/operation/loading/newrequest">
+              <nuxt-link to="/finance/newdeposit">
                 <Button
                   label="درخواست جدید"
                   class="p-button-outlined"
                   style="width: 150px; color: #246020; border: 1px solid #246020"
                 />
               </nuxt-link>
-              <nuxt-link to="/operation">
+              <nuxt-link to="/finance">
                 <Button
                   label="صفحه اصلی"
                   class="mr-2 bg-green-600 text-white"
