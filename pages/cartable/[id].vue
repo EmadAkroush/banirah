@@ -33,44 +33,49 @@
             <!-- Form Container -->
             <form class="w-full px-8 py-8 bg-white rounded-lg">
               <!-- Subject Field -->
-              <div class="mb-6">
-                <label class="block text-gray-700 mb-2" for="subject"
-                  >موضوع</label
-                >
-                <InputText
-                  type="text"
-                  v-model="subject"
-                  class="w-full border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-100"
-                />
+              <div class="flex flex-col sm:flex-row gap-4">
+                <div class="mb-6 flex-1">
+                  <label class="block text-gray-700 mb-2" for="subject"
+                    >موضوع</label
+                  >
+                  <InputText
+                    type="text"
+                    v-model="subject"
+                    class="w-full border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-100"
+                  />
+                </div>
+
+                <!-- Refer To Field with Dropdown -->
+                <div class="mb-6 flex-1">
+                  <label class="block text-gray-700 mb-2" for="refer-to"
+                    >ارجاع به</label
+                  >
+                  <Dropdown
+                    id="refer-to"
+                    :options="user"
+                    v-model="selectedOption"
+                    optionLabel="lastname"
+                    class="w-full"
+                  />
+                </div>
               </div>
 
-              <!-- Refer To Field with Dropdown -->
-              <div class="mb-6">
-                <label class="block text-gray-700 mb-2" for="refer-to"
-                  >ارجاع به</label
-                >
-                <Dropdown
-                  id="refer-to"
-                  :options="user"
-                  v-model="selectedOption"
-                  optionLabel="lastname"
-                  class="w-full"
-                />
-              </div>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <!-- Draft Field -->
+                <div class="mb-6 flex-1">
+                  <label class="block text-gray-700 mb-2" for="draft"
+                    >رونوشت</label
+                  >
 
-              <!-- Draft Field -->
-              <div class="mb-6">
-                <label class="block text-gray-700 mb-2" for="draft"
-                  >رونوشت</label
-                >
-
-                <Dropdown
-                  id="refer-to"
-                  :options="user"
-                  v-model="selectedOption1"
-                  optionLabel="lastname"
-                  class="w-full"
-                />
+                  <Dropdown
+                    id="refer-to"
+                    :options="user"
+                    v-model="selectedOption1"
+                    optionLabel="lastname"
+                    class="w-full"
+                  />
+                </div>
+                <div class="mb-6 flex-1"></div>
               </div>
 
               <!-- Letter Text Field with Editor -->
@@ -79,16 +84,15 @@
                   >متن نامه</label
                 >
                 <!-- PrimeVue Editor with style adjustments -->
-                 {{ content }}
-                 <ClientOnly>
-                <Editor
-                  id="letter-text"
-                  v-model="content"
-                  editorStyle="height: 320px"
-                  class="w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-indigo-100"
-                />
-                 </ClientOnly>
-
+                {{ content }}
+                <ClientOnly>
+                  <Editor
+                    id="letter-text"
+                    v-model="content"
+                    editorStyle="height: 320px"
+                    class="w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-indigo-100"
+                  />
+                </ClientOnly>
               </div>
 
               <div class="flex justify-between">
@@ -235,7 +239,7 @@ export default {
       selectedOption1: null,
       user: null,
       data: null,
-      details : null,
+      details: null,
       subject: null,
       content: null,
       options: [
@@ -273,12 +277,11 @@ export default {
     },
     async detailsfu() {
       try {
-        this.details = await $fetch("/api/letters/go" , {
+        this.details = await $fetch("/api/letters/go", {
           query: { id: `${this.pageId}` },
         });
-      this.subject = this.details.data.subject;
-      this.content = this.details.data.content;
-      
+        this.subject = this.details.data.subject;
+        this.content = this.details.data.content;
       } catch (error) {
         console.log(error);
       } finally {
@@ -304,8 +307,6 @@ export default {
     //     console.log("hy", toRaw(this.data));
     //   }
     // },
-
-   
   },
   beforeMount() {
     this.getproduct();
@@ -314,4 +315,3 @@ export default {
   name: "LetterForm",
 };
 </script>
-

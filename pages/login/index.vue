@@ -91,6 +91,7 @@ export default {
         this.data = await $fetch("/api/auth/login" ,{
           method: "POST",
         });
+        navigateTo("/")
         // داده‌ای که از API دریافت کردید
       } catch (error) {
         console.log(error);
@@ -111,7 +112,7 @@ export default {
     },
   },
   beforeMount() {
-    this.handleSubmit();
+    
   },
 };
 </script>

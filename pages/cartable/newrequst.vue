@@ -5,7 +5,7 @@
         <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
 
         <div class="mr-2 text-right">
-          <p class="text-right"> نامه جدید </p>
+          <p class="text-right">نامه جدید</p>
         </div>
       </div>
       <div
@@ -33,44 +33,51 @@
             <!-- Form Container -->
             <form class="w-full px-8 py-8 bg-white rounded-lg">
               <!-- Subject Field -->
-              <div class="mb-6">
-                <label class="block text-gray-700 mb-2" for="subject"
-                  >موضوع</label
-                >
-                <InputText
-                  type="text"
-                  v-model="value"
-                  class="w-full border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-100"
-                />
+              <div class="flex flex-col sm:flex-row gap-4">
+                <div class="mb-6 flex-1">
+                  <label class="block text-gray-700 mb-2" for="subject"
+                    >موضوع</label
+                  >
+                  <InputText
+                    type="text"
+                    v-model="value"
+                    class="w-full border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-100"
+                  />
+                </div>
+                <div class="mb-6 flex-1">
+                  <label class="block text-gray-700 mb-2" for="refer-to"
+                    >ارجاع به</label
+                  >
+                  <Dropdown
+                    id="refer-to"
+                    :options="user"
+                    v-model="selectedOption"
+                    optionLabel="lastname"
+                    class="w-full"
+                  />
+                </div>
               </div>
 
               <!-- Refer To Field with Dropdown -->
-              <div class="mb-6">
-                <label class="block text-gray-700 mb-2" for="refer-to"
-                  >ارجاع به</label
-                >
-                <Dropdown
-                  id="refer-to"
-                  :options="user"
-                  v-model="selectedOption"
-                  optionLabel="lastname"
-                  class="w-full"
-                />
-              </div>
 
               <!-- Draft Field -->
-              <div class="mb-6">
-                <label class="block text-gray-700 mb-2" for="draft"
-                  >رونوشت</label
-                >
+              <div class="flex  flex-col sm:flex-row gap-4">
+                <div class="mb-6 flex-1">
+                  <label class="block text-gray-700 mb-2" for="draft"
+                    >رونوشت</label
+                  >
 
-                <Dropdown
-                  id="refer-to"
-                  :options="user"
-                  v-model="selectedOption1"
-                  optionLabel="lastname"
-                  class="w-full"
-                />
+                  <Dropdown
+                    id="refer-to"
+                    :options="user"
+                    v-model="selectedOption1"
+                    optionLabel="lastname"
+                    class="w-full"
+                  />
+                </div>
+                <div class="mb-6 flex-1">
+              
+                </div>
               </div>
 
               <!-- Letter Text Field with Editor -->
@@ -274,7 +281,6 @@ export default {
             mainRecipient: "user_456",
           },
         });
-
       } catch (error) {
         console.log(error);
       } finally {
@@ -282,11 +288,9 @@ export default {
         console.log("hy", toRaw(this.data));
       }
     },
-
   },
   beforeMount() {
     this.getproduct();
-
   },
   name: "LetterForm",
 };
