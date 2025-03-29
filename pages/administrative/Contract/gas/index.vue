@@ -238,8 +238,14 @@ export default {
         address: "",
       },
       dropdownOptions: [
-        { label: "Option 1", value: 1 },
-        { label: "Option 2", value: 2 },
+        { label: "سه ماه", value: 1 },
+        { label: "شش ماه", value: 2 },
+        { label: "شش ماه", value: 2 },
+        { label: "یک سال", value: 3 },
+        { label: "دو سال", value: 4 },
+        { label: "سه سال", value: 5 },
+        { label: "چهار سال", value: 6 },
+        { label: "پنج سال", value: 7 },
         // Add more options as needed
       ],
     };

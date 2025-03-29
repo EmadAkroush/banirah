@@ -5,7 +5,7 @@
           <img src="/public/opration/icons-Line-truck.png" alt="" class="pic" />
   
           <div class="mr-2 text-right">
-            <p class="text-right">درخواست بارگیری</p>
+            <p class="text-right"> نامه ها</p>
           </div>
         </div>
         <div

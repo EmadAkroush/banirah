@@ -210,7 +210,7 @@
                       class="flex justify-start items-center p-2 mt-3"
                     >
                       <span class="text-right text-lg font-bold"
-                        > مبلق کل </span
+                        > مبلغ کل </span
                       >
                       <span class="text-right text-lg font-semibold mr-8"
                         >50،000،000 ریال</span
