@@ -16,7 +16,7 @@
             <div class="mt-1 relative rounded-md shadow-sm">
               <InputText
                 id="username"
-                v-model="form.username"
+                v-model="username"
                 placeholder="نام کاربری"
                 class="block w-full"
               />
@@ -31,7 +31,7 @@
             <div class="mt-1 relative rounded-md shadow-sm">
               <InputText
                 id="password"
-                v-model="form.password"
+                v-model="password"
                 type="password"
                 placeholder="رمز عبور"
                 class="block w-full"
@@ -69,11 +69,40 @@
   </div>
 </template>
 <script setup>
+const { authUser } = useAuth();
 definePageMeta({
   layout: false, // This will disable the layout
+
 });
+let username = ref('')
+let password = ref('')
+let data = ref('')
+
+async function handleSubmit() {
+      try {
+       
+        data.value = await $fetch("/api/auth/login" ,{
+          body: {
+            username: username.value,
+            password: password.value,
+          },
+          method: "POST",
+        });
+        authUser.value = data.value
+        navigateTo("/")
+        // داده‌ای که از API دریافت کردید
+      } catch (error) {
+        console.log(error);
+      } finally {
+       
+        console.log("api", data.value);
+      }
+  
+    }
+
 </script>
-<script>
+<!-- <script>
+
 export default {
   data() {
     return {
@@ -82,6 +111,7 @@ export default {
         password: "",
       },
       data: null,
+      
     };
   },
   methods: {
@@ -95,6 +125,7 @@ export default {
           },
           method: "POST",
         });
+        authUser.value = data
         navigateTo("/")
         // داده‌ای که از API دریافت کردید
       } catch (error) {
@@ -103,23 +134,12 @@ export default {
        
         console.log("api", this.data);
       }
-      // this.$router.push('/');
-      // const data = await this.$axios.post(`${apiBase}/oauth/token`({
-      //       grant_type: 'client_credentials', // OAuth2 grant type
-      //       client_id: 6,
-      //       client_secret: "UAY60FJqmWqkEc2ElQIC7cxo8AJ7h8gJBR4kKLe5",
-      //   }), {
-      //       headers: {
-      //           'Content-Type': 'application/x-www-form-urlencoded',
-      //       }
-      //   });
+  
     },
   },
-  beforeMount() {
-    
-  },
+ 
 };
-</script>
+</script> -->
 
 <style lang="scss">
 .general {

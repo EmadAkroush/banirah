@@ -167,9 +167,10 @@
             :rows="10"
             :totalRecords="120"
             :rowsPerPageOptions="[10, 20, 30]"
+             @page="onPageChange"
           ></Paginator>
 
-          <span>صفحه شماره 1</span>
+          <span>صفحه شماره {{ currentPage }}</span>
         </div>
       </div>
     </div>
@@ -311,18 +312,30 @@ export default {
 
         // Repeat as needed...
       ],
+      currentPage: 1,
     };
   },
   methods: {
-    async getproduct() {
+    async getproduct(par) {
       try {
-        this.list = await $fetch("/api/letters/list");
+       
+        this.list = await $fetch("/api/letters/list?page=1", {
+          method: "GET",
+          params : {
+            page: par, // شماره صفحه
+          },
+        });
       } catch (error) {
         console.log(error);
       } finally {
-        this.list = toRaw(this.list.data);
+        this.list = toRaw(this.list?.data);
         console.log("list", toRaw(this.list));
       }
+    },
+    onPageChange(event) {
+      this.currentPage = event?.page + 1;
+      this.getproduct(this.currentPage);
+      // console.log("event", this.currentPage);
     },
     async getproduct2() {
       try {
@@ -334,20 +347,7 @@ export default {
         console.log("let", toRaw(this.user));
       }
     },
-    // async getuser() {
-    //   try {
-    //     this.user = await $fetch("/api/getuser" , {
-    //         params: {
-    //         id: 4
-    //         }
-    //     });
-    //   } catch (error) {
-    //     console.log(error);
-    //   } finally {
-    //     this.user = toRaw(this.user.data);
-    //     console.log("getuser", toRaw(this.user));
-    //   }
-    // },
+  
 
     setActiveTab(tab) {
       this.activeTab = tab; // تنظیم تب فعال

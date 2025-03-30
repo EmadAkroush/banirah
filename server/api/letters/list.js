@@ -4,6 +4,8 @@ export default defineEventHandler(async (event) => {
     public: { apiBase },
   } = useRuntimeConfig();
   const tokennew = getCookie(event, "tokennew");
+  // const body = await readBody(event);
+  const { page } = getQuery(event);
 
   try {
     // const data = await $fetch(`${apiBase}/api/1.0/requests?order_direction=asc&per_page=10`, {
@@ -12,12 +14,12 @@ export default defineEventHandler(async (event) => {
     //         'Authorization': `Bearer ${tokennew}`
     //     }
     // });
-    // console.log("datam" , data );
+    console.log("page" , page );
     const data = await $fetch(`${apiBase}/api/1.0/requests`, {
       method: 'GET',
       params: {
-      page: 1,
-      per_page: 15,
+      page: page,
+      per_page: 10,
       include: "process,participants,activeTasks,data",
       // pmql: "(requester%20%3D%20%22khojaste%22)",
       // filter: "",
