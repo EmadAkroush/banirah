@@ -89,6 +89,10 @@ export default {
       try {
        
         this.data = await $fetch("/api/auth/login" ,{
+          body: {
+            username: this.form.username,
+            password: this.form.password,
+          },
           method: "POST",
         });
         navigateTo("/")

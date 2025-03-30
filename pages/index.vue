@@ -712,6 +712,12 @@
     </div>
   </div>
 </template>
+<script setup>
+definePageMeta({
+  middleware: "auth",
+});
+</script>
+
 <style lang="scss">
 .main {
   background-color: #f3f4f6;
@@ -1066,3 +1072,4 @@ export default {
   },
 };
 </script>
+

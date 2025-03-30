@@ -3,6 +3,8 @@ import axios from "axios";
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
+  const { username, password } = body;
+  
   const {
     public: { apiBase },
   } = useRuntimeConfig();
@@ -14,8 +16,8 @@ export default defineEventHandler(async (event) => {
       grant_type: "password",
       client_id: 6,
       client_secret: "UAY60FJqmWqkEc2ElQIC7cxo8AJ7h8gJBR4kKLe5",
-      username: "khojaste",
-      password: "dr@LjxV3B3J23VFf",
+      username: username,
+      password: password,
     }),
     {
       headers: {

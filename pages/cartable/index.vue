@@ -329,3 +329,8 @@ export default {
   }
 }
 </style>
+<script setup>
+definePageMeta({
+  middleware: "auth",
+});
+</script>
