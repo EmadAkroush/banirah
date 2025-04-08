@@ -14,8 +14,8 @@ export default defineEventHandler(async (event) => {
     `${apiBase}/oauth/token`,
     new URLSearchParams({
       grant_type: "password",
-      client_id: 6,
-      client_secret: "UAY60FJqmWqkEc2ElQIC7cxo8AJ7h8gJBR4kKLe5",
+      client_id: 5,
+      client_secret: "Dbg8FuRbMeuG4mwKWdBnBUY5UwiL4yn55zvfa19Q",
       username: username,
       password: password,
     }),

@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
     const body = await readBody(event)
 
     try {
-        const data = await $fetch(`${apiBase}/api/1.0/process_events/5?event=StartEvent_1`, {
+        const data = await $fetch(`${apiBase}/api/1.0/process_events/2?event=StartEvent_1`, {
             method: 'POST',
             body: body,
             headers: {
