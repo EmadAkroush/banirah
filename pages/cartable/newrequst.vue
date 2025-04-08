@@ -40,7 +40,7 @@
                   >
                   <InputText
                     type="text"
-                    v-model="value"
+                    v-model="subject"
                     class="w-full border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-100"
                   />
                 </div>
@@ -244,6 +244,7 @@ export default {
       user: null,
       data: null,
       content: null,
+      subject: null,
       options: [
         { name: "گزینه ۱", code: "1" },
         { name: "گزینه ۲", code: "2" },
@@ -282,10 +283,10 @@ export default {
         this.data = await $fetch("/api/letters/post", {
           method: "POST",
           body: {
-            subject: "عنوان تستی",
-            content: "محتوای تستی",
-            senders: ["user_123"],
-            mainRecipient: "user_456",
+            subject: this.subject,
+            content: this.content,
+            senders: ["admin"],
+            mainRecipient: this.selectedOption.lastname,
           },
         });
       } catch (error) {

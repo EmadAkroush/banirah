@@ -13,6 +13,7 @@ export default defineEventHandler(async (event) => {
             }
         });
     
+console.log("data" , data);
 
         return data;
     } catch (error) {
