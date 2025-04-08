@@ -86,12 +86,15 @@
                   >متن نامه</label
                 >
                 <!-- PrimeVue Editor with style adjustments -->
-                <Editor
+                <!-- <Editor
                   id="letter-text"
                   v-model="letterText"
                   editorStyle="height: 320px"
                   class="w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-indigo-100"
-                />
+                /> -->
+                <client-only>
+                <tiptap-editor v-model="content" />
+              </client-only>
               </div>
 
               <div class="flex justify-between">
@@ -227,8 +230,11 @@
 }
 </style>
 <script>
+import TiptapEditor from "../../components/TiptapEditor.vue";
 export default {
-  components: {},
+  components: {
+    TiptapEditor,
+  },
   data() {
     return {
       src: null,
@@ -237,6 +243,7 @@ export default {
       selectedOption1: null,
       user: null,
       data: null,
+      content: null,
       options: [
         { name: "گزینه ۱", code: "1" },
         { name: "گزینه ۲", code: "2" },
