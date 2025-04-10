@@ -84,15 +84,18 @@
                   >متن نامه</label
                 >
                 <!-- PrimeVue Editor with style adjustments -->
-                {{ content }}
-                <ClientOnly>
+     
+                <!-- <ClientOnly>
                   <Editor
                     id="letter-text"
                     v-model="content"
                     editorStyle="height: 320px"
                     class="w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-indigo-100"
                   />
-                </ClientOnly>
+                </ClientOnly> -->
+                <client-only>
+                <tiptap-editor v-model="content" />
+              </client-only>
               </div>
 
               <div class="flex justify-between">
@@ -143,7 +146,7 @@
                 label="ثبت"
                 class="mr-2 bg-green-600 text-white"
                 style="width: 150px; background-color: #246020"
-                @click="getdetails()"
+                @click="postproduct()"
               />
             </nuxt-link>
           </div>
@@ -228,8 +231,12 @@
 }
 </style>
 <script>
+import TiptapEditor from "../../components/TiptapEditor.vue";
 export default {
-  components: {},
+  
+  components: {
+    TiptapEditor,
+  },
   data() {
     return {
       pageId: this.$route.params.id,
@@ -289,6 +296,25 @@ export default {
         console.log("getdetails", toRaw(this.details));
       }
     },
+    async postproduct() {
+      try {
+        this.data = await $fetch("/api/letters/post", {
+          method: "POST",
+          body: {
+            subject: this.subject,
+            content: this.content,
+            senders: ["admin"],
+            mainRecipient: this.selectedOption.lastname,
+          },
+        });
+      } catch (error) {
+        console.log(error);
+      } finally {
+        this.data = toRaw(this.data);
+        console.log("hy", toRaw(this.data));
+      }
+    },
+
     // async postproduct() {
     //   try {
     //     this.data = await $fetch("/api/letters/post", {
